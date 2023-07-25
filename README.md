@@ -9,3 +9,10 @@ Integrantes:
 4. Lucas Miranda: Atencion al cliente
 5. Santos Giron: Frontend Developer o Programador Frontend
 6. Nico Duarte: Backend Developer o Programador Backend
+
+Paginas de referencia 
+1. https://www.amazon.com/-/es/ref=nav_logo
+2. https://www.mercadolibre.com.ar/
+3. https://castillo.com.ar/?gclid=Cj0KCQjw5f2lBhCkARIsAHeTvlhLWwduFVSwShuTUUKk_gfM0HDReuOzjBI8EhjKih18AhCHMFtZ5bkaAonpEALw_wcB
+4. https://www.fravega.com/
+5. https://www.musimundo.com/?gclid=Cj0KCQjw5f2lBhCkARIsAHeTvliEZ3pJCnkYW_ng8fJe3W62xtnPH9cMe3CO1O0e_K3pbgQux18rXKQaAmuIEALw_wcB
