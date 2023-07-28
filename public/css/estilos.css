@@ -1,7 +1,10 @@
 body{
     background-color: #201247;
 }
-
+.contenedor{
+    display: flex;
+    justify-content: space-evenly;
+}
 .ofertas{
     background-color: #ffff;
 }
@@ -17,8 +20,9 @@ article{
 }
 .caja1{
     position: relative;
+    margin-right: 90px;
     left: 30px;
-    width: 10%;
+    width: 15%;
     background-color: #FBFDFF;
 }
 .nombre{
@@ -29,7 +33,7 @@ article{
 .precio{
     color: #13B841;
     position: relative;
-    bottom: 45px;
+    bottom: 40px;
     right: 10px;
 }
 .envio-gratis{
@@ -42,11 +46,120 @@ article{
 }
 .ver-mas{
     position: absolute;
-    top: 200px;
+    color: black;
+    top: 220px;
     left: 35px;
 }
 .carrito{
     position: absolute;
-    left: 120px;
-    top: 200px;
+    left: 110px;
+    top: 210px;
+}
+.nombre1{
+    position: relative;
+    bottom: 10px;
+    right: 10px;
+}
+.precio1{
+    color: #13B841;
+    position: relative;
+    bottom: 20px;
+    right: 10px;
+}
+.envio-gratis1{
+    color: #039F00;
+    position: absolute;
+    font-size: 10px;
+    left: 0px;
+    top: 180px;
+    right: 0px;
+}
+.envio-gratis2{
+    color: #039F00;
+    position: absolute;
+    font-size: 10px;
+    left: 0px;
+    top: 180px;
+    right: 0px;
+}
+.nombre2{
+    position: relative;
+    bottom: 28px;
+    right: 10px;
+}
+.nombre3{
+    position: relative;
+    bottom: 20px;
+    right: 10px;
+}
+.precio2{
+    color: #13B841;
+    position: relative;
+    bottom: 35px;
+    right: 10px;
+}
+.envio-gratis3{
+    color: #039F00;
+    position: absolute;
+    font-size: 10px;
+    left: 0px;
+    top: 180px;
+    right: 0px;
+}
+.nombre4{
+    position: relative;
+    bottom: 10px;
+    right: 10px;
+}
+.precio3{
+    color: #13B841;
+    position: relative;
+    bottom: 20px;
+    right: 10px;
+}
+.envio-gratis4{
+    color: #039F00;
+    position: absolute;
+    font-size: 10px;
+    left: 0px;
+    top: 148px;
+    right: 0px;
+}
+.nombre5{
+    position: relative;
+    bottom: 20px;
+    right: 10px;
+}
+.precio4{
+    color: #13B841;
+    position: relative;
+    bottom: 30px;
+    right: 10px;
+}
+.envio-gratis5{
+    color: #039F00;
+    position: absolute;
+    font-size: 10px;
+    left: 0px;
+    top: 155px;
+    right: 0px;
+}
+.nombre6{
+    position: relative;
+    bottom: 15px;
+    right: 10px;
+}
+.precio5{
+    color: #13B841;
+    position: relative;
+    bottom: 30px;
+    right: 10px;
+}
+.envio-gratis6{
+    color: #039F00;
+    position: absolute;
+    font-size: 10px;
+    left: 0px;
+    top: 165px;
+    right: 0px;
 }
