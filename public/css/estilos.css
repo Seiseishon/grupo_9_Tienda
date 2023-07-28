@@ -1,3 +1,52 @@
 body{
     background-color: #201247;
 }
+
+.ofertas{
+    background-color: #ffff;
+}
+.azul{
+    color: #1A30F7;
+    position: absolute;
+    right: 14px;
+    top: 3px;
+}
+article{
+    position: relative;
+    left: 20px;
+}
+.caja1{
+    position: relative;
+    left: 30px;
+    width: 10%;
+    background-color: #FBFDFF;
+}
+.nombre{
+    position: relative;
+    bottom: 35px;
+    right: 10px;
+}
+.precio{
+    color: #13B841;
+    position: relative;
+    bottom: 45px;
+    right: 10px;
+}
+.envio-gratis{
+    color: #039F00;
+    position: absolute;
+    font-size: 10px;
+    left: 0px;
+    top: 190px;
+    right: 0px;
+}
+.ver-mas{
+    position: absolute;
+    top: 200px;
+    left: 35px;
+}
+.carrito{
+    position: absolute;
+    left: 120px;
+    top: 200px;
+}
