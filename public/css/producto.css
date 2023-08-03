@@ -1,4 +1,183 @@
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .borde-arriba{
+    padding: 13px 0px;
+    position: relative;
     background-color: #B07ACA;
+}
+body{
+    background-color: #600d86;
+}
+.ubi{
+    position: relative;
+    top: 15px;
+    right: 15px;
+}
+.menu{
+    position: relative;
+    left: 5px;
+    bottom: 10px;
+    background-color: black;
+    color: white;
+    padding: 2px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border: solid 1px white;
+}
+.carrito{
+    position: relative;
+    left: 210px;
+}
+.lupa{
+    position: relative;
+    left: 200px;
+}
+.corazon{
+    position: relative;
+    left: 190px;
+}
+.producto{
+    position: absolute;
+    left: 40px;
+    top: 5px;
+    font-size: 20px;
+}
+.nombre{
+    position: relative;
+    top: 50px;
+    width: 80%;
+}
+.tele{
+    position: relative;
+    top: 65px;
+    left: 40px;
+}
+.caja{
+    background-color: white;
+    width: 30%;
+    position: relative;
+    left: 65%;
+    bottom: 70px;
+    font-size: 10px;
+    height: 20vh;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+#comprar{
+    cursor: pointer;
+    border: black 1px solid;
+    margin-bottom: 5px;
+    background-color: #3A3E94;
+    position: relative;
+    left: 5px;
+    top: 15px;
+    color: #fff;
+    width: 90%;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+#carro{
+    cursor: pointer;
+    position: relative;
+    left: 5px;
+    top: 25px;
+    width: 90%;
+    border: black 1px solid;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+#guardados{
+    cursor: pointer;
+    position: relative;
+    left: 5px;
+    top: 45px;
+    width: 90%;
+    border: black 1px solid;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+.precio{
+    position: absolute;
+    bottom: 220px;
+    left: 90px;
+    font-size: 25px;
+    color: #05FF00;
+}
+.ars{
+    position: absolute;
+    font-size: 25px;
+    bottom: 220px;
+    left: 20px;
+    color: #fff
+}
+.cuotas{
+    position: absolute;
+    left: 20px;
+    color: #fff;
+    font-size: 12px;
+}
+.medios{
+    text-decoration: none;
+    color: #00B2FF;
+    position: absolute;
+    left: 20px;
+    bottom: 175px;
+    font-size: 12px;
+}
+.camion{
+    position: relative;
+    background-color: #fff;
+    width: 50%;
+    padding: 10px 0px;
+    top: 60px;
+    left:20px;
+}
+.envio{
+    position: relative;
+    bottom: 100px;
+
+}
+.devolucion{
+    color: #05FF00;
+    position: absolute;
+    bottom: 90px;
+    left: 20px;
+    text-decoration: none;
+}
+.retira{
+    position: absolute;
+    bottom: 40px;
+    left: 50px;
+    font-size: 13px;
+    color: #fff;
+}
+.tienda{
+    position: absolute;
+    bottom: 50px;
+    left: 20px;
+}
+.mapa{
+    color: #00B2FF;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    text-decoration: none;
 }
