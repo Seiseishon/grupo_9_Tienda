@@ -1,11 +1,22 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+}
 body{
     min-width: auto;
     background-color: #201247;
 }
+a{
+    text-decoration: none;
+    color: black;
+}
+p{
+    font-size: 13px;
+}@media(max-width:480px){
 .contenedor{
     display: flex;
-    justify-content: space-evenly;
-}
+    flex-direction: column;
+}}
 .ofertas{
     background-color: #ffff;
 }
@@ -13,17 +24,27 @@ body{
     color: #1A30F7;
     position: absolute;
     right: 14px;
-    top: 3px;
+    top: 8px;
 }
 article{
     position: relative;
     left: 20px;
 }
+.product{
+    cursor: pointer;
+}
+.caja2{
+    position: relative;
+    margin-top: 10px;
+    left: 10px;
+    width: 55%;
+    background-color: #FBFDFF;
+}
 .caja1{
     position: relative;
-    margin-right: 90px;
-    left: 30px;
-    width: 15%;
+    margin-top: 10px;
+    left: 10px;
+    width: 55%;
     background-color: #FBFDFF;
 }
 .nombre{
@@ -34,16 +55,14 @@ article{
 .precio{
     color: #13B841;
     position: relative;
-    bottom: 40px;
+    bottom: 45px;
     right: 10px;
 }
 .envio-gratis{
     color: #039F00;
     position: absolute;
     font-size: 10px;
-    left: 0px;
-    top: 190px;
-    right: 0px;
+    top: 185px;
 }
 .ver-mas{
     position: absolute;
@@ -51,20 +70,33 @@ article{
     top: 220px;
     left: 35px;
 }
+.ver-mas1{
+    position: absolute;
+    color: black;
+    top: 155px;
+    left: 35px;
+}
+
 .carrito{
     position: absolute;
-    left: 110px;
-    top: 210px;
+    left: 115px;
+    top: 190px;
+}
+.carrito1{
+    position: absolute;
+    left: 115px;
+    top: 135px;
 }
 .nombre1{
     position: relative;
-    bottom: 10px;
+    bottom: 13px;
     right: 10px;
+    font-size: 11px;
 }
 .precio1{
     color: #13B841;
     position: relative;
-    bottom: 20px;
+    bottom: 22px;
     right: 10px;
 }
 .envio-gratis1{
@@ -72,7 +104,7 @@ article{
     position: absolute;
     font-size: 10px;
     left: 0px;
-    top: 180px;
+    top: 135px;
     right: 0px;
 }
 .envio-gratis2{
@@ -80,8 +112,25 @@ article{
     position: absolute;
     font-size: 10px;
     left: 0px;
-    top: 180px;
+    top: 150px;
     right: 0px;
+}
+.precio6{
+    color: #13B841;
+    position: relative;
+    bottom: 40px;
+    right: 10px;
+}
+.ver-mas2{
+    position: absolute;
+    color: black;
+    top: 185px;
+    left: 35px;
+}
+.carrito2{
+    position: absolute;
+    left: 115px;
+    top: 165px;
 }
 .nombre2{
     position: relative;
@@ -96,7 +145,7 @@ article{
 .precio2{
     color: #13B841;
     position: relative;
-    bottom: 35px;
+    bottom: 30px;
     right: 10px;
 }
 .envio-gratis3{
@@ -104,8 +153,19 @@ article{
     position: absolute;
     font-size: 10px;
     left: 0px;
-    top: 180px;
+    top: 175px;
     right: 0px;
+}
+.carrito3{
+    position: absolute;
+    left: 115px;
+    top: 180px;
+}
+.ver-mas3{
+    position: absolute;
+    color: black;
+    top: 200px;
+    left: 35px;
 }
 .nombre4{
     position: relative;
@@ -123,18 +183,30 @@ article{
     position: absolute;
     font-size: 10px;
     left: 0px;
-    top: 148px;
+    top: 135px;
     right: 0px;
+}
+.carrito4{
+    position: absolute;
+    left: 115px;
+    top: 130px;
+}
+.ver-mas4{
+    position: absolute;
+    color: black;
+    top: 155px;
+    left: 35px;
 }
 .nombre5{
     position: relative;
     bottom: 20px;
     right: 10px;
+    font-size: 12px;
 }
 .precio4{
     color: #13B841;
     position: relative;
-    bottom: 30px;
+    bottom: 34px;
     right: 10px;
 }
 .envio-gratis5{
@@ -142,8 +214,19 @@ article{
     position: absolute;
     font-size: 10px;
     left: 0px;
-    top: 155px;
+    top: 135px;
     right: 0px;
+}
+.carrito5{
+    position: absolute;
+    left: 115px;
+    top: 143px;
+}
+.ver-mas5{
+    position: absolute;
+    color: black;
+    top: 165px;
+    left: 35px;
 }
 .nombre6{
     position: relative;
@@ -161,6 +244,118 @@ article{
     position: absolute;
     font-size: 10px;
     left: 0px;
-    top: 165px;
+    top: 125px;
     right: 0px;
+}
+.carrito6{
+    position: absolute;
+    left: 115px;
+    top: 130px;
+}
+.ver-mas6{
+    position: absolute;
+    color: black;
+    top: 155px;
+    left: 35px;
+}
+@media (min-width:481px){
+    .contenedor{
+        max-width: 630px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .nombre{
+        font-size: 12px;
+    }
+    .caja2{
+        position: relative;
+        margin-top: 10px;
+        left: 10px;
+        width: 50%;
+        background-color: #FBFDFF;
+    }
+    .caja1{
+        margin-left: 50px;
+        left: 0px;
+        width: 100%;
+    }
+    .carrito,.carrito1{
+        left: 130px;
+        top: 180px;
+    }
+    .ver-mas,.ver-mas1{
+        left: 50px;
+        top: 200px;
+    }
+    .envio-gratis{
+        top: 174px;
+    }
+    .sofa{
+        width: 80%;
+    }
+    .envio-gratis1{
+        top: 150px;
+    }
+    .nombre1{
+        font-size: 11px;
+    }
+    .ver-mas2{
+        top: 190px;
+        left: 50px;
+    }
+    .ver-mas3{
+        left: 50px;
+    }
+    .carrito2,.carrito3{
+        top: 180px;
+        left: 130px;
+    }
+    .nombre3{
+        font-size: 15px;
+    }
+    .nombre2{
+        font-size: 12px;
+    }
+    .ver-mas4,.ver-mas5{
+        left: 50px;
+    }
+    .carrito4{
+        left: 130px;
+    }
+    .nombre4{
+        font-size: 15px;
+    }
+    .precio3{
+        bottom: 25px;
+    }
+    .envio-gratis4{
+        top: 130px;
+    }
+    .envio-gratis5{
+        top: 125px;
+    }
+    .ver-mas5{
+        top: 150px;
+    }
+    .carrito5{
+        top:130px;
+        left: 130px;
+    }
+    .nombre6{
+        font-size: 18px;
+    }
+    .carrito6{
+        top: 140px;
+        left: 180px;
+    }
+    .envio-gratis6{
+        top: 140px;
+    }
+    .ver-mas6{
+        left: 80px;
+        top: 160px;
+    }
+    .nombre5{
+        font-size: 11px;
+    }
 }
