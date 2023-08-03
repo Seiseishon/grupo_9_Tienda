@@ -5,15 +5,39 @@
     <meta charset="UTF-8">
     <title>Open Market</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/estilos.css">
-
+    <link rel="logo" type="images/OpenMarket logo_4.png" href="images/OpenMarket logo_4.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="top header">
-        <div class="logo">
-            <img src="images/OpenMarketlogo_4.png" alt="Logo de OpenMarket">
-        </div>
+    <div class="row-header">
+     <div class="logo" id="logo">
+     <img src="images/OpenMarket logo_4.png" alt="Logo OpenMarket">
+    </div>
+    <div class="search-bar header-item">
+        <form action="GET">
+         <input type="text" id="search" placeholder="Buscar">
+           <div class="submit clickable">
+             <i class="fa fa-search">
+
+             </i>
+         </div>
+     </form>
+    </div>
+    <nav class="navbar">
+        <ul class="navbar-items">
+            <li>Crea tu ceunta</li>
+            <li>Mi cunta</li>
+            <li>Mi carrito</li>
+        </ul>
+    </nav>
+    <div class="burger-menu-container">
+        <button class="burger-menu">
+         <i class="fa fa-bars burger">
+             </i>
+      </button>
     </div>
     <h3 class="ofertas">Ofertas más destacadas</h3>
     <p class="azul">ver todo ></p>
