@@ -1,0 +1,463 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: arial;
+  background: #7F00FF; 
+}
+
+/* Barra de Navegacion */
+
+.nav-inicio {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.113);
+  color: black;
+}
+
+ul,
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+}
+
+.nav-icon {
+    color: black;
+}
+
+.btns-nav {
+    display: flex;
+    gap: 30px;
+    padding: 1% 0 1% 0;
+}
+
+.btns-nav a {
+    color: black;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 15px;
+    transition: .3s ease-in-out all;
+}
+
+.btns-nav a:hover {
+    transform: scale(0.9);
+}
+
+.buscador {
+    position: relative;
+    transition: .3s ease-in-out all;
+}
+
+.buscador input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 20px;
+    border-radius: 5px 0 0 5px;
+    border: 0;
+    outline: none;
+}
+
+.buscador:hover {
+    transform: scale(1.05);
+}
+
+.buscador button {
+    background-color: white;
+    padding: 10px;
+    position: absolute;
+    border: 0;
+    top: 0;
+    bottom: 0;
+    right: 1;
+    margin: auto;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+/* Navegacion de Pagina */
+
+.nav-pag {
+    margin: 2% 0 2% 15%;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-pag a {
+    background-color: white;
+    padding: 5px 25px;
+    border-radius: 15px;
+}
+
+.nav-pag span {
+    font-size: 25px;
+}
+
+/* Producto a la Venta */
+
+.producto-main {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    gap: 30px;
+}
+
+/* Producto a la Venta - Cuadro 1 */
+
+.producto-main .producto {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.producto-main .producto img {
+    border-radius: 15px;
+}
+
+.producto .imagenes {
+    display: flex;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.producto .imagenes img {
+    width: 70px;
+    transition: .3s ease-in-out all;
+}
+
+.producto .imagenes img:hover {
+    transform: scale(0.9);
+}
+
+.producto .imagenes img {
+    border-radius: 15px;
+}
+
+/* Producto a la Venta - Cuadro 2 */
+
+.producto-main .producto-info {
+    width: 60%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.estrellas {
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.producto-main .producto-info  h1 {
+    font-size: 45px;
+}
+
+.producto-main .producto-info h2 {
+    font-size: 20px;
+}
+
+.opcionesproducto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.producto-main .producto-info .op-producto {
+    display: flex;
+    gap: 20px;
+}
+
+.producto-main .producto-info .op-producto a {
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    transition: .2s ease-in-out all;
+}
+
+.producto-main .producto-info .op-producto a:hover {
+    transform: scale(0.9);
+}
+
+.producto-main .producto-info .precio {
+    font-size: 50px;
+}
+
+.producto-main .producto-info .info2 {
+    font-size: 20px;
+}
+
+/* Producto a la Venta - Cuadro 3 */
+
+.producto-main .datos {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.producto-main .datos .acciones {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    color: black;
+}
+
+.producto-main .datos .acciones a {
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 20px;
+    color: black;
+    transition: .3s ease-in-out all;
+}
+
+.producto-main .datos .acciones a:hover {
+    background-color: #8c2ced;
+    color: white;
+    box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.622);
+}
+
+.producto-main .datos .metodospago {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    gap: 20px;
+    background-color: white;
+    border: 15px;
+    padding: 20px;
+    text-align: center;
+}
+
+.producto-main .datos .metodospago h1 {
+    font-size: 25px;
+}
+
+.producto-main .datos .metodospago p {
+    font-size: 15px;
+}
+
+/* Productos Relacionados */
+
+.producto-2 {
+    width: 70%;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.producto-2 h1 {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 2%;
+}
+
+/* Productos Relacionados - Cartas */
+
+.productos-relacionados {
+    display: flex;
+    gap: 4%;
+}
+
+.carta {
+    background-color: white;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.carta img {
+    width: 100%;
+    display: flex;
+    margin: auto;
+    border-radius: 15px 15px 0 0 ;
+}
+
+.carta-info {
+    border-top: 1px solid rgba(0, 0, 0, 0.368);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.carta-info {
+    text-align: center;
+}
+
+.carta-info h1 {
+    color: black;
+}
+
+.carta-info h2 {
+    color: rgb(56, 233, 36);
+}
+
+.carta-info p {
+    font-size: 20px;
+}
+
+/* Caracteristicas Producto */
+
+.producto-2 .caracteristicas {
+    margin-top: 3%;
+}
+
+.producto-2 .caracteristicas .caracteristicas-info {
+    display: flex;
+    font-size: 20px;
+    color: white;
+    gap: 10%;
+}
+
+.producto-2 .caracteristicas .caracteristicas-info .carac-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.producto-2 .caracteristicas .caracteristicas-info .carac-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.producto-2 .caracteristicas .descripcion {
+    margin-top: 3%;
+    font-size: 20px;
+}
+
+.producto-2 .caracteristicas .descripcion p {
+    color: white;
+}
+
+/* Opiniones del Producto */
+
+.producto-2 .op-producto {
+    margin-top: 3%;
+    display: flex;
+    gap: 20px;
+}
+
+.producto-2 .op-producto .cuadro-1 {
+    width: 27%;
+    height: 160px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.producto-2 .op-producto .cuadro-1 .puntaje {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    padding-top: 5%;
+    width: 100%;
+}
+
+.producto-2 .op-producto .cuadro-1 .puntaje .estrellas-2 {
+    font-size: 18px;
+    text-align: center;
+}
+
+.producto-2 .op-producto .cuadro-1 .puntaje .estrellas-2 i {
+    font-size: 25px;
+}
+
+
+.producto-2 .op-producto .cuadro-1 .puntaje h1 {
+    color: black;
+    font-size: 50px;
+}
+
+.producto-2 .op-producto .cuadro-2 {
+    background-color: white;
+    height: 160px;
+    width: 62%;
+    border-radius: 20px;
+}
+
+/* Footer */
+
+footer {
+    color: white;
+    height: auto;
+    background: #6a3093; 
+    background: -webkit-linear-gradient(to top, #a044ff, #6a3093);  
+    background: linear-gradient(to top, #a044ff, #6a3093); 
+}
+
+footer .footer-1 {
+    padding: 15px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer .footer-1 a {
+    color: white;
+    font-size: 17px;
+}
+
+footer .footer-2 {
+    padding: 15px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer .footer-2 a {
+    font-size: 17px;
+    color: white;
+}
+
+footer .footer-3 {
+    text-align: center;
+    font-size: 7px;
+    padding: 5px;
+}
+
+footer a {
+    transition: 0.3s ease-in-out all;
+}
+
+footer a:hover {
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.768);
+}
+
+@media (max-width: 1360px ) {
+
+    /* Producto a la Venta */
+
+    .producto-main {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        gap: 30px;
+    }
+
+    .nav-pag {
+        margin: 2% 0 2% 5%;
+        color: black;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    /* Productos Relacionados */
+
+    .producto-2 {
+        width: 90%;
+        margin: auto;
+        margin-top: 2%;
+        margin-bottom: 5%;
+    }
+}
