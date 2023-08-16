@@ -1,11 +1,10 @@
 *{
-    margin: 0px;
-    padding: 0px;
     box-sizing: border-box;
+    padding: 0;
 }
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #33105a;
+    min-width: auto;
+    background-color: #201247;
 }
 header{
     background-color: #460F60;
@@ -431,7 +430,8 @@ article{
 }
 .nombre7{
     position: relative;
-    bottom: 30px;
+    bottom: 0px;
+    font-size: 10px;
     right: 10px;
 }
 .envio-gratis7{
@@ -646,6 +646,7 @@ article{
     }
     .jostik{
         width: 100%;
+        height: 90%;
     }
     .celu{
         width: 100%;
@@ -763,11 +764,11 @@ article{
     }
     .ver-mas7{
         left: 10%;
-        top: 113%;
+        top: 143%;
     }
     .carrito7{
         left: 80%;
-        top: 103%;
+        top: 130%;
     }
     .nombre4{
         bottom: 20px;
@@ -785,7 +786,7 @@ article{
         top: 150px;
     }
     .precio6{
-        bottom: 40px;
+        bottom: 5px;
     }
     .precio7{
         bottom: 21px;
