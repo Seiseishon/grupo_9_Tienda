@@ -11,6 +11,20 @@ app.get('/', (req,res) =>{
     res.sendFile(__dirname + '/views/index.html')
 });
 
+
+
+
+
+
+app.get('/login', (req,res) =>{
+    res.sendFile(__dirname + '/views/login.html')
+});
+
+
+
+
+
+
 app.get('/producto/SmartTVde60pulgadas4KMarcaRCA', (req,res)=>{
     res.sendFile(__dirname + '/views/productos.html')
 })

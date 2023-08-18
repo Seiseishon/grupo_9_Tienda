@@ -1,0 +1,199 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing:border-box ;
+}
+body{
+    min-width: auto;
+    background-color: #201247;
+}
+header{
+    background-color: #460F60;
+    padding:  20px ;
+    top: 0;
+    width: 100%;
+}
+
+body {font-family: 'Edu SA Beginner', cursive;
+font-family: 'Playfair Display', serif;
+font-family: 'Roboto', sans-serif;
+}
+
+.items-menu{
+    background-color: white;
+    color:  #460F60;
+    display: block;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 20px;
+    border-top: 5px;
+    height: 40px;
+}
+h1{
+    display: none;
+}
+.carrito-compra{
+    width: 50px;
+    padding-left: 15px;
+    height: 40px;
+}
+.esquina-iz{
+    display: flex;
+}
+.logo{
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: white
+}
+
+.ocupaElLogo{
+    width: 90%;
+    margin: auto;
+    padding-top: 30%;
+    padding-left: 10%;
+}
+.cuenta{
+    width: 40px;
+    border-radius: 22px;
+    height: 40px;
+}
+.parte-superior{
+    display: flex;
+    justify-content: space-between;
+}
+form{
+    display: flex;
+    padding-top: 20px;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+.icono-buscar{
+    align-items: center;
+}
+.navbar{
+    display: none;
+}
+a{
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    padding: 5px;
+}
+
+
+main{
+    padding-top: 8%;
+    padding-bottom: 8%;
+}
+.cuerpo-formulario{
+   
+    background-color: white;
+    border-radius: 20px;
+    width: 70%;
+    margin: auto;
+    padding: 10px;
+}
+.formulario{
+    width: 100%;
+}
+.label{
+    display: flex;
+    margin: 10px;
+    align-items: center;
+    width: 70%;
+}
+.boton{
+    border-radius: 5px;
+    background-color: #0077CC;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+  }
+
+.boton:hover {
+    background-color: #460F60; 
+}
+
+footer{
+    padding: 20px;
+    text-align: center;
+    background-color: #460F60;
+    width: 90%;
+    margin: auto;
+    border-radius: 10px
+}
+@media(min-width: 660px){
+    header{
+        height: 200px;
+    }
+    h1{
+        display: block;
+        font-family: 'Caprasimo',cursive;
+        font-size: 25px;
+        color: black;
+        text-shadow: 1px 0px 0px white,
+                     0px 1px 0px white,
+                     -1px 0px 0px white,
+                     0px -1px 0px white;
+        padding-left: 150px;
+        width: 20%;
+        padding-top: 3%
+    }
+    .logo{
+        position: absolute;
+        width: 120px;
+        height: 120px;
+    }
+    .cuenta{
+        right: 10%;
+        position: absolute;
+        top: 80px;
+    }
+    .esquina-iz{
+        position: absolute;
+        left: 90%;
+    }
+    .subir form{
+        position: absolute;
+        top: 8%;
+        left: 45%;
+    }
+    .items-menu{
+        display: none;
+    }
+    .carrito-compra{
+        position: relative;
+        top:60px;
+        width: 55px;
+    }
+    .agrandar{
+        width: 30%;
+    }
+    .renglon-busqueda{
+        width: 100%;
+        height: 40px;
+        border-radius: 10px;
+
+    }
+    .icono-buscar{
+        position: relative;
+        left: 5px;
+    }
+    .submit-clickable{
+        font-size: 30px;
+        border-radius: 10px;
+        width: 40px;
+    }
+    .cuerpo-formulario{
+        width: 60%;
+    }
+    .boton{
+        font-size: 20px;
+    }
+}
