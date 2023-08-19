@@ -77,9 +77,9 @@ li{
 .submit-clickable{
     position: relative;
     cursor: pointer;
-    left: 90%;
+    left: 100%;
     bottom: 70px;
-    width: 7%;
+    width: 50%;
     border: black 2px solid;
     background-color: #ffff;
     border-radius: 20px;

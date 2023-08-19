@@ -1,0 +1,204 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing:border-box ;
+}
+body{
+    min-width: auto;
+    background-color: #201247;
+    font-family: 'Edu SA Beginner', cursive;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    position: relative;
+    background-color: #460F60;
+    padding:  20px ;
+    top: 0;
+    width: 100%;
+}
+a,img, button,input{
+    display: none;
+}
+
+.lupa{
+    position: absolute;
+    top: 15px;
+    left: 90%;
+    display: block;
+}
+.ubi{
+    position: relative;
+    top: 20px;
+}
+.flecha{
+    position: relative;
+    top: 6px;
+}
+h3{
+    position: relative;
+    left: 10%;
+    bottom: 25px;
+    width: 70%;
+}
+.ubicacion{
+    position: relative;
+    display: block;
+    color: black;
+    text-decoration: none;
+    left: 10%;
+    width: 80%;
+}
+.imagen{
+    display: block;
+    width: 20%;
+}
+article{
+    background-color: white;
+    position: relative;
+    top: 40px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.nombre{
+    position: relative;
+    left: 25%;
+    width: 70%;
+    bottom: 60px;
+    font-size: 13px;
+    margin: 0px;
+}
+.boton{
+    display: block;
+    background-color: #7913a8;
+    color: white;
+    position: relative;
+    bottom: 10px;
+    left: 25%;
+}
+.comprar{
+    display: block;
+    color: white;
+    background-color: #7913a8;
+    position: relative;
+    bottom: 33px;
+    left: 55%;
+}
+.precio{
+    margin-top: 10%;
+}
+.precio1{
+    margin-top: 13%;
+    margin-left: 30%;
+    position: relative;
+    bottom: 80px;
+    left: 8%;
+}
+.compra-final{
+    display: block;
+    position: absolute;
+    bottom: 50px;
+    height: 50px;
+    width: 100%;
+    color: white;
+    background-color: #7913a8;
+}
+@media (min-width: 600px){
+    .precio1{
+        bottom: 120px;
+        left: 20%;
+        width: 50%;
+    }
+}
+@media (min-width: 769px){
+    img, button,input{
+        display: block;
+    }
+    .flecha,h3{
+        display: none;
+    }
+    .carrito-compra,.cuenta{
+        width: 50px;
+        padding-left: 15px;
+        height: 40px;
+    }
+    .burger1{
+        display: none;
+    }
+    .cuenta{
+        position: relative;
+        left: 90%;
+        bottom: 0px;
+    }
+    .logo{
+        position: relative;
+        bottom: 50px;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        background-color: white
+    }
+    .ocupaElLogo{
+            width: 90%;
+            margin: auto;
+            padding-top: 30%;
+            padding-left: 10%;
+        }
+        li{
+            display: inline;
+        }
+        ul{
+            display: flex;
+            justify-content: space-around;
+        }
+        .renglon-busqueda{
+            position: relative;
+            left: 20%;
+            bottom: 100px;
+            width: 50%;
+            height: 40px;
+            border-radius: 10px;
+        }
+        .precio1{
+            bottom: 140px;
+            left: 20%;
+        }
+        .submit-clickable{
+            font-size: 30px;
+            border-radius: 10px;
+            width: 5%;
+            height: 40px;
+            position: absolute;
+            left: 69%;
+            top: 21px;
+        }
+        .lupa{
+            left: 10%;
+            top: 2px;
+        }
+        header{
+            height: 150px;
+        }
+        .ubi{
+            top: -20px;
+            left: 1.5%;
+        }
+        .ubicacion{
+            top: -58px;
+            left: 6.5%;
+        }
+}
+@media (min-width: 900px){
+    .nombre{
+        bottom: 150px;
+    }
+    .boton{
+        top: 50px;
+    }
+    .comprar{
+        top: 27px;
+    }
+    .precio1{
+        bottom: 170px;
+    }
+}
