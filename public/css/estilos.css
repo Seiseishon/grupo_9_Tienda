@@ -1,7 +1,243 @@
 *{
     box-sizing: border-box;
     padding: 0;
+    margin: 0;
 }
+
+/* HEADER PC */
+
+.pc .nav-inicio {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.113);
+    color: black;
+    font-family: sans-serif;
+  }
+  
+  ul,
+  li,
+  a {
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  .nav-icon {
+      color: white;
+  }
+  
+  .btns-nav {
+      display: flex;
+      gap: 30px;
+      padding: 1% 0 1% 0;
+  }
+
+  .btns-nav i {
+    cursor: pointer;
+    font-size: 35px;
+    color: white;
+    transition: .3s ease-in-out all;
+  }
+
+  .btns-nav i:hover {
+    transform: scale(1.1);
+    color: rgba(255, 255, 255, 0.658);
+  }
+  
+  .btns-nav a {
+      color: black;
+      background-color: white;
+      padding: 10px 20px;
+      border-radius: 15px;
+      transition: .3s ease-in-out all;
+  }
+  
+  .btns-nav a:hover {
+      transform: scale(0.9);
+  }
+  
+  .buscador {
+      position: relative;
+      transition: .3s ease-in-out all;
+  }
+  
+  .buscador input {
+      width: 100%;
+      padding: 10px;
+      padding-right: 20px;
+      border-radius: 15px 0 0 15px;
+      border: 0;
+      outline: none;
+  }
+  
+  .buscador:hover {
+      transform: scale(1.05);
+  }
+  
+  .buscador button {
+      background-color: white;
+      padding: 10px;
+      position: absolute;
+      border: 0;
+      top: 0;
+      bottom: 0;
+      right: 1;
+      margin: auto;
+      border-radius: 0 15px 15px 0;
+      cursor: pointer;
+  }
+
+
+  .mobile {
+    display: none;
+  }
+
+/* --------- */
+
+
+/* OFERTAS MAS DESTACADAS ITEMS */
+
+.productos-ofertas {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 2%;
+}
+
+.productos-ofertas .carta {
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.productos-ofertas a {
+    background-color: white;
+    width: 20%;
+    border-radius: 20px;
+    transition: .3s ease-in-out all;
+}
+
+.productos-ofertas a:hover {
+    transform: scale(1.09);
+    box-shadow: 1px 1px 15px rgba(255, 255, 255, 0.562);
+}
+
+.img-ofertas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    height: 200px;
+}
+
+.imf-ofer {
+    height: 100%;
+}
+
+
+.info-ofertas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+    margin: 10px  15px;
+}
+
+.desc-ofertas {
+    display: flex;
+    flex-direction: column;
+}
+
+.carta h1, h2 {
+    text-align: center;
+    font-size: 90%;
+    margin: 0 15px;
+}
+
+.carta h2 {
+    color: green;
+}
+
+.info-ofertas .envio-free {
+    color: green;
+}
+
+
+.carro-ofertas {
+    width: 40px;
+}
+
+
+/* ---------------------------- */
+
+/* TARJETAS E ENVIO GRATIS */
+
+.xd {
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10%;
+}
+
+/* ----------------------- */
+
+/* FOOTER */
+
+footer {
+    margin-top: 2%;
+    font-family: sans-serif;
+    color: white;
+    height: auto;
+    background-color: #4d1268;
+}
+
+footer .footer-1 {
+    padding: 15px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer .footer-1 a {
+    color: white;
+    font-size: 17px;
+}
+
+footer .footer-2 {
+    padding: 15px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer .footer-2 a {
+    font-size: 17px;
+    color: white;
+}
+
+footer .footer-3 {
+    text-align: center;
+    font-size: 7px;
+    padding: 5px;
+    letter-spacing: 3px;
+}
+
+footer a {
+    transition: 0.3s ease-in-out all;
+}
+
+footer a:hover {
+    color: rgb(172, 169, 169);
+}
+
+/* ------ */
+
+
 body{
     min-width: auto;
     background-color: #201247;
@@ -16,13 +252,23 @@ a{
 }
 p{
     font-size: 13px;
-}@media(max-width:480px){
+}
+
+@media(max-width:480px){
+    .pc {
+        display: none;
+    }
 .contenedor{
     display: flex;
     flex-direction: column;
-}}
+}
+}
 .ofertas{
-    background-color: #ffff;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-family: sans-serif;
+    margin: 2% 0 2% 0;
 }
 .cuenta{
     width: 9%;
@@ -395,26 +641,6 @@ article{
     color: black;
     top: 155px;
     left: 35px;
-}
-.footer-items{
-    width: 100%;
-}
-.item-footer{
-    position: relative;
-    top: 10px;
-    width: 100%;
-}
-.item-footer1{
-    position: relative;
-    top: 25px;
-    width: 100%;
-}
-.item-footer-title{
-    position: relative;
-    top: 10px;
-    text-decoration: none;
-    color: #ffff;
-    font-size: 18px;
 }
 
 .carrito7{
