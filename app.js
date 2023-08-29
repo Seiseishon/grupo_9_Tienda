@@ -1,37 +1,19 @@
 const express = require('express');
+const router = require('./src/routes');
+const routerProduct = require('./src/routes/productos');
 const app = express ();
+const PORT = 3000
+
+
+
+app.set('view engine', 'ejs')
+app.set('views', './src/views')
 
 app.use(express.static('public'))
+app.use('/', router);
+app.use('/products', routerProduct);
 
-app.listen(3000, () =>{
+
+app.listen(PORT, () =>{
     console.log("Servidor andando");
 });
-
-app.get('/', (req,res) =>{
-    res.sendFile(__dirname + '/views/index.html')
-});
-
-
-
-
-
-
-app.get('/login', (req,res) =>{
-    res.sendFile(__dirname + '/views/login.html')
-});
-
-app.get('/carrito', (req,res) =>{
-    res.sendFile(__dirname + '/views/carrito.html')
-});
-
-app.get('/formulario', (req,res) =>{
-    res.sendFile(__dirname + '/views/formulario.html')
-});
-
-
-
-
-
-app.get('/producto/SmartTVde60pulgadas4KMarcaRCA', (req,res)=>{
-    res.sendFile(__dirname + '/views/productos.html')
-})

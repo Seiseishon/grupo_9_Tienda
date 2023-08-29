@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head')%>
+    <link rel="stylesheet" href="/css/estilos.css">
+    <title>Open Market</title>
+</head>
+
+
+<body>
+    <%- include('./partials/header') %>
+        <div>
+            <img class="banner" src="images/electronica_d.avif" alt="banner">
+        </div>
+        <h3 class="ofertas">OFERTAS MAS DESTACADAS</h3>
+        <section class="productos-ofertas">
+            <% products.forEach(product=>{ %>
+
+                <a href="/producto/SmartTVde60pulgadas4KMarcaRCA">
+                    <article class="carta">
+                        <div class="img-ofertas">
+                            <img class="img-ofer" src="/images/<%=product.img %>" alt="" width="150px">
+                        </div>
+                        <div class="desc-producto">
+                            <h1>
+                                <%=product.name %>
+                            </h1>
+                            <h2>ARS$<%=product.price %>
+                            </h2>
+                            <div class="info-ofertas">
+                                <div class="desc-ofertas">
+                                    <p class="envio-free">
+                                        <%=product.envio %>
+                                    </p>
+                                    <p>
+                                        <%=product.ver %>
+                                    </p>
+                                </div>
+                                <img src="/images/<%=product.carrito %>" alt="" class="carro-ofertas">
+                            </div>
+                        </div>
+                    </article>
+                </a>
+
+                <% }) %>
+        </section>
+
+        <section class="xd">
+            <img src="images/icon.tarjetas.png" alt="">
+            <img src="images/envio a tod.png" alt="">
+        </section>
+
+        <%-include('./partials/footer') %>
