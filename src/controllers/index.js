@@ -25,8 +25,13 @@ const controladorLogin = (req,res)=>{
     res.render('login')
 }
 
+const controladorRegister = (req,res)=>{
+    res.render('register')
+}
+
 module.exports = {
     controladorCarrito,
     controladorHome,
     controladorLogin,
+    controladorRegister,
 }

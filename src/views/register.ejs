@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/register.css">
+    <title>¡Registro en proceso!</title>
+    <%-include('./partials/head')%>
+</head>
+<body>
+    <header>
+        <div class="Parte-Superior">
+            <div class="esquina-iz">
+                <div class="items-menu">
+                      <i class="fas fa fa-bars"></i>
+                  </div>  
+                <img class="carrito-compra" src="/images/burger menu (3).png" alt="">
+           </div>
+           <h1>OPEN MARQUET</h1>
+           <div class="logo">
+            <img class="ocupaElLogo" src="images/OpenMarket logo_4.png" alt="Logo OpenMarket">
+           </div>
+           <img class="cuenta" src="/images/burger menu (2).png" alt="">
+        </div>
+        <div class="subir">
+            <form class="agrandar" action="GET">
+                <input class="barra-busqueda" type="text" id="search" placeholder="Buscar">
+                <div class="icono-buscar">
+                    <button class="submit-clickable"> <i class="fa fa search lupa"></i></button>
+                </div>
+            </form>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Productos</a></li>
+                <li><a heref="#">Servicios</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+       <form action="/register" method="POST">
+         <div id="box-register">
+             <div class="left">
+                 <h1>¡REGISTRATE!</h1>
+                   <label for="nombreC">Nombre y Apellido:</label>
+                      <input type="text" name="nombreC">
+                   <label for="Usuario">Usuario:</label>
+                      <input type="text" name="Usuario">
+                   <label for="password">Contraseña:</label>
+                      <input type="password" name="password">
+                   <label for="Email">Email:</label>
+                      <input type="text" name="Email">
+                   <label for="telefono">Numero de telefono</label>
+                      <input type="tel" name="telefono">
+                  <input type="submit" name="Registrar" value="Registrar">
+              </div>
+              <div class="raight">
+                <img src="/images/img-for-register.jpg" id="im-reg">
+              </div>
+            </div>
+        </form>  
+    </main>
+
+    <footer>
+        <div class="footer-items-arriba">
+            <a href="#">Comunidad</a>
+            <a href="#">Nuestras Redes</a>
+            <a href="#">Acerca de</a>
+            <a href="#">Herramientas</a>
+        </div>
+        <div class="footer-items-medio">
+            <a href="#">Politica de Privacidad</a>
+            <a href="#">Aviso Legal</a>
+            <a href="#">Condiciones de Uso</a>
+        </div>
+        <div class="footer-items-abajo">
+            <h1>Open Market Inc 2023</h1>
+            
+        </div>
+    </footer>
+
+</body>
+</html>
