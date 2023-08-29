@@ -173,7 +173,7 @@ label,input,select {
   color: white;
   padding: 10px 20px;
   font-size: 15px;
-  margin-top: 10px;
+  margin: 10px;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -205,5 +205,9 @@ label,input,select {
 .Contraseña-confirmar{
     display: flex;
     padding: 10px;
+}
+.enviar-campos{
+    display: flex;
+    justify-content: space-between;
 }
 }

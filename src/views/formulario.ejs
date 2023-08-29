@@ -40,10 +40,10 @@
             
             <div class="nombre-usuario">
             <label for="nombre">Nombre y Apellido:</label>
-            <input type="text"name="nombre" required pattern=".{6,}" title="Ej:Santos Giron" placeholder="Ej:Santos Giron" class="control">
+            <input type="text"name="nombre" required pattern=".{6,}" class="control">
             
             <label for="usuario">Nombre de Usuario:</label>
-            <input type="text"name="usuario" required pattern=".{4,}" title="Ej:Santos" placeholder="Ej:Santos" class="control">
+            <input type="text"name="usuario" required pattern=".{4,}" class="control">
             </div>
 
             <div class="fecha-domicilio">
@@ -51,7 +51,7 @@
             <input type="date"name="fechaNacimiento" required class="control">
         
             <label for="domicilio">Domicilio:</label>
-            <input type="text"name="domicilio" required pattern=".{5,}" title="Ej:La Quiaca" placeholder="Ej:La Quiaca" class="control">
+            <input type="text"name="domicilio" required pattern=".{5,}" class="control">
 
 
             <label for="perfil">Perfil de Usuario:</label>
@@ -78,14 +78,15 @@
         
             <div class="Contraseña-confirmar">
             <label for="contrasena">Contraseña:</label>
-            <input type="password"name="contrasena" required pattern=".{8,}" title="Ingresa al menos 8 caracteres" placeholder="Ingresa almenos 8 caracteres" class="control">
+            <input type="password"name="contrasena" required pattern=".{8,}" class="control">
         
             <label for="confirmarContrasena">Confirmar Contraseña:</label>
             <input type="password"name="confirmarContrasena" required class="control">
             </div>
-        
+            <div class="enviar-campos">
             <button type="submit" class="boton">Enviar</button>
             <button type="reset" class="boton">Limpiar Campos</button>
+            </div>
           </form>
 
     </main>

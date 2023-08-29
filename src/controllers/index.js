@@ -24,9 +24,13 @@ const controladorCarrito = (req,res)=>{
 const controladorLogin = (req,res)=>{
     res.render('login')
 }
+const controladorFormulario = (req,res)=>{
+    res.render('formulario')
+}
 
 module.exports = {
     controladorCarrito,
     controladorHome,
     controladorLogin,
+    controladorFormulario
 }
