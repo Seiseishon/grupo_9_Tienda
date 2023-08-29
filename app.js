@@ -24,6 +24,10 @@ app.get('/carrito', (req,res) =>{
     res.sendFile(__dirname + '/views/carrito.html')
 });
 
+app.get('/formulario', (req,res) =>{
+    res.sendFile(__dirname + '/views/formulario.html')
+});
+
 
 
 

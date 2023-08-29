@@ -18,7 +18,6 @@ body {font-family: 'Edu SA Beginner', cursive;
 font-family: 'Playfair Display', serif;
 font-family: 'Roboto', sans-serif;
 }
-
 .items-menu{
     background-color: white;
     color:  #460F60;
@@ -105,7 +104,7 @@ h1{
     display: flex;
     justify-content: space-between;
 }
-form{
+.form{
     display: flex;
     padding-top: 20px;
     justify-content: center;
@@ -129,40 +128,11 @@ main{
     padding-top: 8%;
     padding-bottom: 8%;
 }
-.cuerpo-formulario{
-   
-    background-color: white;
-    border-radius: 20px;
-    width: 70%;
-    margin: auto;
-    padding: 10px;
-}
-.formulario{
-    width: 100%;
-}
-.label{
-    display: flex;
-    margin: 10px;
-    align-items: center;
-    width: 70%;
-}
-.boton{
-    border-radius: 5px;
-    background-color: #c898db;
-    color: white;
-    padding: 10px 20px;
-    margin-top: 10px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: 100%;
-    transition: .3s ease-in-out all;
-}
 
-.boton:hover {
-    background-color: #460F60;
-    transform: scale(1.05);
-} 
+
+
+
+
 
 footer{
     padding: 20px;
@@ -172,82 +142,68 @@ footer{
     margin: auto;
     border-radius: 10px
 }
-@media(min-width: 660px){
-    header{
-        height: 200px;
-    }
-    h1{
-        display: block;
-        font-family: 'Caprasimo',cursive;
-        font-size: 25px;
-        color: black;
-        text-shadow: 1px 0px 0px white,
-                     0px 1px 0px white,
-                     -1px 0px 0px white,
-                     0px -1px 0px white;
-                     
-                     
-    }
-    .logo{
-        width: 35%;
-        text-align: center;
-        
-    }
-    .cuenta{
-        right: 10%;
-        position: absolute;
-        top: 54px;
-    }
-    .esquina-iz{
-        position: absolute;
-        left: 90%;
-        top: 65px;
-    }
-    .personal{
-        top: 65px;
-        left: 5%;
-    }
-    .subir form{
-        position: absolute;
-        top: 8%;
-        left: 45%;
-    }
-    .items-menu{
-        display: none;
-    }
-    .carrito-compra{
-        position: relative;
-        top: 33px;
-        width: 55px;
-    }
-    .agrandar{
-        width: 30%;
-    }
-    .renglon-busqueda{
-        width: 100%;
-        height: 40px;
-        border-radius: 10px;
 
-    }
-    .submit-clickable{
-        font-size: 30px;
-        border-radius: 10px;
-        width: 40px;
-    }
-    .cuerpo-formulario{
-        width: 60%;
-    }
-    .boton{
-        font-size: 20px;
-    }
-    .buscador{
-        bottom: 30px;
-        left: 38%;
-    }
-    form{
-        padding-top: 0;
-    }
-    .label{
-        width: 60%;
-    }
+
+
+
+
+
+
+
+.form-form {
+    width: 60%;
+    background-color: white;
+    padding: 10px;
+    margin: auto;
+    border-radius: 10px;
+  }
+  
+label,input,select {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.control{
+  width: 70%;
+  border-radius: 5px;
+}
+.boton{
+  border-radius: 5px;
+  background-color: #c898db;
+  color: white;
+  padding: 10px 20px;
+  font-size: 15px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 50%;
+}
+
+.boton:hover {
+  background-color: #460F60; /
+} 
+@media(min-width: 700px){
+.form-form{
+    width: 90%;
+    border-radius: 10px;
+    margin: auto;
+}
+.nombre-usuario{
+    display: flex;
+    padding: 10px;
+}
+.fecha-domicilio{
+    display: flex;
+    padding: 10px;
+}
+.Interés{
+    display: flex;
+    padding: 10px;
+}
+
+.Contraseña-confirmar{
+    display: flex;
+    padding: 10px;
+}
 }
