@@ -5,28 +5,33 @@
 }
 body{
     min-width: auto;
-    background-color: #201247;
+    background-color: #9452b3;
     font-family: 'Edu SA Beginner', cursive;
     font-family: 'Playfair Display', serif;
     font-family: 'Roboto', sans-serif;
 }
 header{
     position: relative;
-    background-color: #460F60;
+    background-color: #c898db;
     padding:  20px ;
     top: 0;
     width: 100%;
 }
+main{
+    padding-top: 5px;
+}
+.footer{
+    padding-top: 5px;
+    width: 90%;
+    margin: auto;
+}
 a,img, button,input{
     display: none;
 }
-
-.lupa{
-    position: absolute;
-    top: 15px;
-    left: 90%;
+.cantidad input{
     display: block;
 }
+
 .ubi{
     position: relative;
     top: 20px;
@@ -51,57 +56,127 @@ h3{
 }
 .imagen{
     display: block;
-    width: 20%;
-}
+    width: 10%;
+    margin-left: 8%;
+    padding-top: 5%;
+    transition: .3s ease-in-out all;
+    }
+    .imagen:hover{
+        transform: scale(1.20);
+    }
+
 article{
     background-color: white;
     position: relative;
-    top: 40px;
     margin-left: 5%;
     margin-right: 5%;
+    border-radius: 10px;
+    transition: .3s ease-in-out all;
 }
+
+article:hover {
+    transform: scale(1.02);
+    box-shadow: 1px 1px 15px rgba(255, 255, 255, 0.562);
+}
+
 .nombre{
-    position: relative;
-    left: 25%;
-    width: 70%;
-    bottom: 60px;
+    width: 65%;
     font-size: 13px;
-    margin: 0px;
+    margin: auto;
+}
+.imagen-nombre{
+    display: flex;
+}
+.boton-comprar{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin: auto;
 }
 .boton{
     display: block;
-    background-color: #7913a8;
-    color: white;
-    position: relative;
-    bottom: 10px;
-    left: 25%;
-}
+    background-color: white;
+    color: blue;
+    padding: 4px;
+    border: 0px;
+    }
 .comprar{
     display: block;
-    color: white;
-    background-color: #7913a8;
-    position: relative;
-    bottom: 33px;
-    left: 55%;
+    color: blue;
+    background-color: white;
+    border: 0px;
+    padding: 4px;
+    }
+.precio-solo{
+    font-size: 13px;
+
 }
+.junto{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    padding: 5px;
+}   
+.cantidad{
+    display: flex;
+    font-size: 13px;
+    align-items: center;
+}
+.cantidad input{
+    width: 20px;
+    border-radius: 5px;
+    
+}
+
 .precio{
-    margin-top: 10%;
+    font-size: 13px;
+    margin: auto;
 }
 .precio1{
-    margin-top: 13%;
-    margin-left: 30%;
-    position: relative;
-    bottom: 80px;
-    left: 8%;
+    font-size: 13px;
+    margin: auto;
 }
+.precio1,p{
+    padding: 4px 0px;
+}
+.total{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+
 .compra-final{
     display: block;
-    position: absolute;
-    bottom: 50px;
-    height: 50px;
-    width: 100%;
+    position: relative;
+    height: 38px;
+    width: 70%;
     color: white;
-    background-color: #7913a8;
+    background-color: #c898db;
+    border-radius: 10px;
+    left: 15%;
+    transition: .3s ease-in-out all;
+    }
+    .compra-final:hover{
+        transform: scale(1.09);
+    }
+.color-footer{
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+    transition: .3s ease-in-out all;
+}
+
+.color-footer:hover {
+    transform: scale(1.02);
+    box-shadow: 1px 1px 15px rgba(255, 255, 255, 0.562);
+}
+.personal{
+    display: none;
+}
+h1{
+    display: none;
 }
 @media (min-width: 600px){
     .precio1{
@@ -109,41 +184,54 @@ article{
         left: 20%;
         width: 50%;
     }
+    .precio1,p{
+        text-align: center;
+    }
+.compra-final{
+    font-size: 15px;
+}
 }
 @media (min-width: 769px){
+    .footer{
+        width: 80%;
+        margin: 0;
+        padding-top: 0;
+    }
     img, button,input{
         display: block;
     }
     .flecha,h3{
         display: none;
     }
-    .carrito-compra,.cuenta{
-        width: 50px;
-        padding-left: 15px;
-        height: 40px;
-    }
     .burger1{
         display: none;
     }
-    .cuenta{
-        position: relative;
+    .personal{
+        display: block;
+        position: absolute;
         left: 90%;
-        bottom: 0px;
+        font-size: 50px;
+        color: #9452b3;
     }
     .logo{
-        position: relative;
-        bottom: 50px;
-        border-radius: 50%;
-        width: 60px;
-        height: 60px;
-        background-color: white
+        width: 35%;
+        text-align: center;
     }
-    .ocupaElLogo{
-            width: 90%;
-            margin: auto;
-            padding-top: 30%;
-            padding-left: 10%;
-        }
+    h1{
+        display: block;
+        font-weight: bold;
+        font-family: 'Caprasimo',cursive;
+        font-size: 25px;
+        color: black;
+        text-shadow: 1px 0px 0px white,
+                     0px 1px 0px white,
+                     -1px 0px 0px white,
+                     0px -1px 0px white;
+        transition: .3s ease-in-out all;
+    }
+    .logo:hover{
+        transform: scale(1.20);
+    }
         li{
             display: inline;
         }
@@ -151,54 +239,115 @@ article{
             display: flex;
             justify-content: space-around;
         }
-        .renglon-busqueda{
+        .buscador {
             position: relative;
-            left: 20%;
-            bottom: 100px;
-            width: 50%;
-            height: 40px;
-            border-radius: 10px;
+            transition: .3s ease-in-out all;
+            width: 40%;
+            bottom: 50px;
+            left: 35%;
         }
+        
+        .buscador input {
+            width: 100%;
+            padding: 10px;
+            padding-right: 20px;
+            border-radius: 15px 0 0 15px;
+            border: 0;
+            outline: none;
+        }
+        
+        .buscador:hover {
+            transform: scale(1.05);
+        }
+        
+        .buscador button {
+            background-color: white;
+            padding: 10px;
+            position: absolute;
+            border: 0;
+            top: 0;
+            bottom: 0;
+            left: 100%;
+            margin: auto;
+            border-radius: 0 15px 15px 0;
+            cursor: pointer;
+        }
+
+
+
+
+
+
+
         .precio1{
             bottom: 140px;
             left: 20%;
         }
-        .submit-clickable{
-            font-size: 30px;
-            border-radius: 10px;
-            width: 5%;
-            height: 40px;
-            position: absolute;
-            left: 69%;
-            top: 21px;
-        }
-        .lupa{
-            left: 10%;
-            top: 2px;
-        }
         header{
-            height: 150px;
+            height: 200px;
+            padding: 50px 20px 20px 20px;
         }
         .ubi{
-            top: -20px;
+            top: -5px;
             left: 1.5%;
         }
         .ubicacion{
-            top: -58px;
+            top: -28px;
             left: 6.5%;
         }
+        main{
+            display: flex;
+            width: 95%
+        }
+        article{
+            width: 150%;
+        }
+    .color-footer{
+        height: 100%;
+    }    
 }
 @media (min-width: 900px){
     .nombre{
         bottom: 150px;
+        font-size: 20px;
     }
     .boton{
-        top: 50px;
+        top: 7px;
+        font-size: 20px;
+        padding: 10px;
     }
     .comprar{
-        top: 27px;
+        font-size: 20px;
+        padding: 10px;
     }
     .precio1{
         bottom: 170px;
     }
+    .precio1,p{
+        padding: 10px 0;
+        font-size: 20px;
+    }
+    .precio-solo{
+        font-size: 20px;
+    }
+    .cantidad{
+        font-size: 20px;
+    }
+    .cantidad input{
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.personal{
+    transition: color 0.3s;
+  }
+  .personal:hover {
+    color: white;
+  }
+.compra-final{
+    transition: background-color 0.3s;
+}
+.compra-final:hover {
+    background-color: #7d10af;
 }
