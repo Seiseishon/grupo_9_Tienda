@@ -1,0 +1,42 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+    min-height: 600px;
+    padding: 80px;
+    background-color: #9452b3;   
+    display: flex;
+}
+
+.caja-registro {
+    margin: auto;
+    width: 90%;
+    padding:  20px ;
+    background-image: linear-gradient(to top, rgb(161, 140, 209), rgba(255, 255, 255, 0,365));     
+    overflow: hidden;
+    padding: .7em;
+    border-radius: 1em;
+
+    display: grid;
+    grid-auto-rows: max-content;
+    grid-template-columns: repeat(auto-fit, minmax(310px,1fr));
+    gap: .6em;
+}
+
+.img-register {   
+ overflow: hidden;
+ border-radius: 1em;
+ display: flex;
+}
+.imag-register {
+    margin: auto;
+    width: 80%;
+    max-width: 60vw;
+}
+
+.caja-register {
+
+}
