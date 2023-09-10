@@ -4,6 +4,6 @@ const controladorProducts = require('../controllers/productos');
 const routerProduct = express.Router();
 
 
-routerProduct.get('/', controladorProducts)
+routerProduct.get('/productDetail', controladorProducts)
 
 module.exports = routerProduct;

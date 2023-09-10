@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="css/register.css">
-    <title>¡Registro en proceso!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/formulario.css">
+    <link rel="logo" type="images/OpenMarket logo_4.png" href="images/OpenMarket logo_4.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Quicksand:wght@700&family=Raleway:wght@300;600&family=Roboto+Slab:wght@300;800&display=swap" rel="stylesheet">
-    <%-include('./partials/head')%>
-   
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Edu+SA+Beginner&family=Playfair+Display:wght@500&family=Roboto&display=swap" rel="stylesheet">
+    <title>Formulario</title>
 </head>
-
 <body>
-
     <header>
         <div class="parte-superior">
             <div class="esquina-iz">
@@ -28,70 +28,68 @@
             </div>
         </div>
         <div class="buscador">
-            <form action="get">
+            <form class="form" action="get">
                 <input type="text" placeholder="Buscar..." />
                 <button><i  class="fa fa-search lupa"></i></button>
             </form>
         </div>
         <div class="personal"><i class="fas fa-user-circle"></i></div>
     </header>
-
     <main>
-         <div class="caja-registro">
-               <div class="img-register"> 
-                 <img src="images/personal-data-3.svg" id="ima-register">
-                </div>
-                <div class="caja-register">    
-                    <h2 id="titulo">¡REGISTRATE!</h2>
-                 <form action="/register" method="POST">     
-                     
-                     <div class="caja-formulario">
+        <form class="form-form">
+            
+            <div class="nombre-usuario">
+            <label for="nombre">Nombre y Apellido:</label>
+            <input type="text"name="nombre" required pattern=".{6,}" class="control">
+            
+            <label for="email">Email:</label>
+            <input type="email"name="email" required pattern=".{4,}" class="control">
+            </div>
 
-                         <label for="nombreC">Nombre y Apellido:</label>
-                         <input type="text" name="nombreC" id="input">
+            <div class="fecha-domicilio">
+            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+            <input type="date"name="fechaNacimiento" required class="control">
+        
+            <label for="domicilio">Domicilio:</label>
+            <input type="text"name="domicilio" required pattern=".{5,}" class="control">
 
-                          <label for="Usuario">Usuario:</label>
-                          <input type="text" name="Usuario" id="input">
 
-                          <label for="password">Contraseña:</label>
-                          <input type="password" name="password" id="input">
+            <label for="perfil">Perfil de Usuario:</label>
+            <select name="perfil">
+              <option value="comprador">Comprador</option>
+              <option value="vendedor">Vendedor</option>
+            </select>
+            </div>
+        
+            <div class="Interés">   
+            <label>Categorías de Interés:</label>
+               
+              
+              <label><input type="checkbox" value="electro">  Electro</label>
+              <label><input type="checkbox" value="moda">  Moda</label>
+              <label><input type="checkbox" value="hogar">  Hogar</label>
+              <label><input type="checkbox" value="juguetes">  Juguetes</label>
+              <label><input type="checkbox" value="vidaSana">  Vida Sana</label>
+              </div>
+            
+        
+            <label for="foto">Foto de Usuario:</label>
+            <input type="file" name="foto" accept=".jpg" class="control">
+        
+            <div class="Contraseña-confirmar">
+            <label for="contrasena">Contraseña:</label>
+            <input type="password"name="contrasena" required pattern=".{8,}" class="control">
+        
+            <label for="confirmarContrasena">Confirmar Contraseña:</label>
+            <input type="password"name="confirmarContrasena" required class="control">
+            </div>
+            <div class="enviar-campos">
+            <button type="submit" class="boton">Enviar</button>
+            <button type="reset" class="boton">Limpiar Campos</button>
+            </div>
+          </form>
 
-                         <label for="Email">Email:</label>
-                         <input type="text" name="Email" id="input">
-
-                         <label for="telefono">Numero de telefono</label>
-                         <input type="tel" name="telefono" id="input">
-
-                          <input type="submit" name="Registrar" value="Registrar" id="boton">
-                     </div>  
-                 </form>   
-                 <div class="google-faceb">
-                     <h3 id="titulo">O continuar con</h3>
-                       </div>
-                     <nav class="redes">
-                         <a href="#" class="google">
-                             <img src="images/img.gmail.svg" id="icono">
-                          </a>
-                          <a href="#" class="facebook">
-                             <img src="images/img.faceb.svg" id="icono">
-                           </a>       
-                      </nav>   
-                  </div>
-              </div>            
-           </div>  
-             
     </main>
-   <footer>
-    <div class="Herramientas">
-        <a class="a" href="#">Comunidad</a>
-        <a class="a" href="#">Nuestras Redes</a>
-        <a class="a" href="#">Acerca De</a>
-        <a class="a" href="#">Herramientas</a>
-        <a class="a" href="#">Política de Privacidad</a>
-        <a class="a" href="#">Aviso Legal</a>
-        <a class="a" href="#">Condiciones de Uso</a>
-   </div>
-   <a href="#">Open Market Inc 2023 Dirección Wall Street 298</a>
- </footer>
+    
 </body>
 </html>
