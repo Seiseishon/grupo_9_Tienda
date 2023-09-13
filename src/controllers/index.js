@@ -29,9 +29,20 @@ const controladorRegister = (req,res)=>{
     res.render('register')
 }
 
+const controladorCreate = (req,res)=>{
+    let usuario = {
+       nombreYApellido: req.body.nombre,
+       email:  req.body.email,
+       domicilio:req.body.domicilio,
+       contraseña: req.body.contraseña
+    }
+    res.send(usuario)
+}
+
 module.exports = {
     controladorCarrito,
     controladorHome,
     controladorLogin,
-    controladorRegister
+    controladorRegister,
+    controladorCreate
 }

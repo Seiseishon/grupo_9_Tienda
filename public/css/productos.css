@@ -1,0 +1,85 @@
+.pc .nav-inicio {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.113);
+    color: black;
+    font-family: sans-serif;
+  }
+  
+  ul,
+  li,
+  a {
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  .nav-icon {
+      color: white;
+  }
+  
+  .btns-nav {
+      display: flex;
+      gap: 30px;
+      padding: 1% 0 1% 0;
+  }
+
+  .btns-nav i {
+    cursor: pointer;
+    font-size: 35px;
+    color: white;
+    transition: .3s ease-in-out all;
+  }
+
+  .btns-nav i:hover {
+    transform: scale(1.1);
+    color: rgba(255, 255, 255, 0.658);
+  }
+  
+  .btns-nav a {
+      color: black;
+      background-color: white;
+      padding: 10px 20px;
+      border-radius: 15px;
+      transition: .3s ease-in-out all;
+  }
+  
+  .btns-nav a:hover {
+      transform: scale(0.9);
+  }
+  
+  .buscador {
+      position: relative;
+      transition: .3s ease-in-out all;
+  }
+  
+  .buscador input {
+      width: 100%;
+      padding: 10px;
+      padding-right: 20px;
+      border-radius: 15px 0 0 15px;
+      border: 0;
+      outline: none;
+  }
+  
+  .buscador:hover {
+      transform: scale(1.05);
+  }
+  
+  .buscador button {
+      background-color: white;
+      padding: 10px;
+      position: absolute;
+      border: 0;
+      top: 0;
+      bottom: 0;
+      right: 1;
+      margin: auto;
+      border-radius: 0 15px 15px 0;
+      cursor: pointer;
+  }
+
+
+  .mobile {
+    display: none;
+  }
