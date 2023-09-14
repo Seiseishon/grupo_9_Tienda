@@ -41,7 +41,15 @@ const controladorProducts = {
         res.render('productos',{
             products
         })
-    }
+    },
+    destroy:(req, res)=> {
+        const products = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../datos/datos.json'), 'Utf8'))
+       const deleteId =req.params.id;
+       const deleteUltimo=products.filter(products=>products.id !=deleteId);
+       const deleteGuardar=JSON.stringify(deleteUltimo,null,2)
+       fs.writeFileSync(path.resolve(__dirname,'../datos/datos.json'),deleteGuardar);
+       res.redirect('/')
+    },
 
     
 }

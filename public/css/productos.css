@@ -180,3 +180,12 @@ p{
 .carro-ofertas {
   width: 40px;
 }
+.desaparece-aparece{
+  display: block;
+}
+.desaparece-aparece div {
+  padding: 20px;
+}
+.crear-99{
+  display: block;
+}

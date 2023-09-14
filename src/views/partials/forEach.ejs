@@ -1,7 +1,13 @@
 <section class="productos-ofertas">
+
+
+    <div class="crear-99"><a href="/products/create">Crear</a></div>
+    
+
+
     <% products.forEach(product=>{ %>
 
-        <a href="./productDetail.ejs">
+        <a href="">
             <article class="carta">
                 <div class="img-ofertas">
                     <img class="img-ofer" src="/images/<%=product.img %>" alt="" width="150px">
@@ -26,6 +32,11 @@
                 </div>
             </article>
         </a>
-
+        <div class="desaparece-aparece">
+        <div><a href="/products/productDetail<%=product.id%>">Caracteristicas</a></div>
+        <div><a href="">Eitar</a></div>
+        <div><a href="/products/delete">Borrar</a></div>
+        </div>
         <% }) %>
+        
 </section>

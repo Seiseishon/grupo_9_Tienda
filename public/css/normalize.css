@@ -347,3 +347,18 @@ template {
 [hidden] {
   display: none;
 }
+.Administrar-40{
+  font-size: 30px;
+  text-align: center;
+}
+.Administrar-40 a{
+  color: white;
+}
+.crear-99{
+  font-size: 30px;
+  text-align: center;
+  display: none;
+}
+.desaparece-aparece{
+  display: none;
+}
