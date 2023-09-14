@@ -42,16 +42,30 @@ const controladorProducts = {
             products
         })
     },
-    destroy:(req, res)=> {
-        const products = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../datos/datos.json'), 'Utf8'))
-       const deleteId =req.params.id;
-       const deleteUltimo=products.filter(products=>products.id !=deleteId);
-       const deleteGuardar=JSON.stringify(deleteUltimo,null,2)
-       fs.writeFileSync(path.resolve(__dirname,'../datos/datos.json'),deleteGuardar);
-       res.redirect('/')
+
+    editar: (req, res) => {
+        const id = req.params.id;
+        const productoEditado = products.find (p=> p.id == id);
+        res.render ('editar.ejs', {
+            productoEditado
+        })
     },
 
+    update: (req, res) => {
+        res.send('Producto actualizado recibido')
+    },
     
+
+   destroy:(req, res)=> {
+    const products = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../datos/datos.json'), 'Utf8'))
+     const deleteId =req.params.id;
+      const deleteUltimo=products.filter(products=>products.id !=deleteId);
+     const deleteGuardar=JSON.stringify(deleteUltimo,null,2)
+     fs.writeFileSync(path.resolve(__dirname,'../datos/datos.json'),deleteGuardar);
+     res.redirect('/')
+    },
+
+
 }
 
 
