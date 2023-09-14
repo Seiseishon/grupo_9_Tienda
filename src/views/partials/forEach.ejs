@@ -1,0 +1,31 @@
+<section class="productos-ofertas">
+    <% products.forEach(product=>{ %>
+
+        <a href="./productDetail.ejs">
+            <article class="carta">
+                <div class="img-ofertas">
+                    <img class="img-ofer" src="/images/<%=product.img %>" alt="" width="150px">
+                </div>
+                <div class="desc-producto">
+                    <h1>
+                        <%=product.name %>
+                    </h1>
+                    <h2>ARS$<%=product.price %>
+                    </h2>
+                    <div class="info-ofertas">
+                        <div class="desc-ofertas">
+                            <p class="envio-free">
+                                <%=product.envio %>
+                            </p>
+                            <p>
+                                <%=product.ver %>
+                            </p>
+                        </div>
+                        <img src="/images/<%=product.carrito %>" alt="" class="carro-ofertas">
+                    </div>
+                </div>
+            </article>
+        </a>
+
+        <% }) %>
+</section>
