@@ -6,6 +6,8 @@ const express = require('express');
 const app = express ();
 const PORT = 3000
 
+app.use(express.urlencoded({extended:false}));
+app.use(express.json());
 
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
@@ -22,11 +24,10 @@ app.set('view engine', 'ejs')
 app.set('views', './src/views')
 
 app.use(express.static('public'))
-app.use('/products', controladorProducts.producto);
-app.use('/create', controladorCreate);
+app.use('/products',routerProduct);
+
 app.use(router);
-app.use(routerProduct);
-app.use(routerCreate)
+
 
 app.listen(PORT, () =>{
     console.log("Servidor andando");

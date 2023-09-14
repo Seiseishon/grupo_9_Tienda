@@ -6,4 +6,5 @@ const routerProduct = express.Router();
 routerProduct.get('/create', controladorProducts.producto)
 routerProduct.get('/productDetail', controladorProducts.detail)
 
+routerProduct.post('/create',controladorProducts.create)
 module.exports = routerProduct;
