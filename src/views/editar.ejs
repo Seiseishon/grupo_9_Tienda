@@ -41,13 +41,13 @@
            <h1>Editar Producto</h1> 
 
            <label for="name">Nombre:</label>
-           <input type="text" id="name" name="name" required><br>
+           <input type="text" id="name" name="name" value="<%=product.name %>" required><br>
            
            <label for="price">Precio:</label>
-           <input type="number" id="precio" name="precio" required><br>
+           <input type="number" id="precio" name="price" value="<%=product.price %>" required><br>
 
-           <label for="descripcion">Descripcion:</label>
-           <textarea name="descripcion" id="descripcion" required></textarea><br>
+           <label for="descripcion">Envio:</label>
+           <input type="number" id="precio" name="envio" value="<%=product.envio %>" required><br>
 
            <input type="submit" value="Guardar">
         </form>

@@ -37,7 +37,9 @@
             <form action="/products/productsDetail/<%=product.id%>">
                 <button>Caracteristicas</button>
             </form>
-        <div><a href="">Eitar</a></div>
+            <form action="/products/editar/<%=product.id%>">
+                <button>Editar</button>
+            </form>
         <form action="/products/delete/<%=product.id%>" method="post">
             <button>Borrar</button>
         </form>

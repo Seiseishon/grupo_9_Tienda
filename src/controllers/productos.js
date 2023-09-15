@@ -61,15 +61,34 @@ const controladorProducts = {
     },
 
     editar: (req, res) => {
+        const products = dato()
         const id = req.params.id;
-        const productoEditado = products.find (p=> p.id == id);
-        res.render ('editar.ejs', {
-            productoEditado
+        const product = products.find (p=> p.id == id);
+        res.render ('editar', {
+            product
         })
     },
 
     update: (req, res) => {
-        res.send('Producto actualizado recibido')
+        let products = dato();
+        const newProduct = {
+            id: req.params.id,
+            name: req.body.name,
+            price: req.body.price,
+            envio: req.body.envio
+        }
+        products = products.map(product => {
+            if(product.id == newProduct.id){
+                return newProduct
+            }else{
+                return product
+            }
+        })
+        const data = JSON.stringify(products);
+        fs.writeFileSync(path.resolve(__dirname, '../datos/datos.json'), data)
+        res.render('productos',{
+            products
+        });
     },
 }
 
