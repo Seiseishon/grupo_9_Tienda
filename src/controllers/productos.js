@@ -50,21 +50,19 @@ const controladorProducts = {
     },
     destroy: (req, res) => {
         let productos = dato();
-
         const id = +req.params.id;
         console.log(id);
-        let productosEliminar = productos.filter(p => p.id !== id);
+        let productosEliminar = productos.filter(product => product.id !== id);
         const data = JSON.stringify(productosEliminar);
         fs.writeFileSync(path.resolve(__dirname, '../datos/datos.json'), data)
-        const producto = productos.find(p => p.id == id);
-        res.redirect('/');
+        res.redirect('/products/listado');
     },
 
     editar: (req, res) => {
         const products = dato()
         const id = req.params.id;
-        const product = products.find (p=> p.id == id);
-        res.render ('editar', {
+        const product = products.find(p=> p.id == id);
+        res.render ('editar',{
             product
         })
     },
@@ -75,7 +73,10 @@ const controladorProducts = {
             id: req.params.id,
             name: req.body.name,
             price: req.body.price,
-            envio: req.body.envio
+            img: req.body.image,
+            ver: "ver mas...",
+            carrito: "carrito.jpg",
+            envio: "$" + req.body.envio,
         }
         products = products.map(product => {
             if(product.id == newProduct.id){
