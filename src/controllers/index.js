@@ -39,10 +39,15 @@ const controladorCreate = (req,res)=>{
     res.send(usuario)
 }
 
+const controladorEditar = (req,res)=>{
+    res.render('editar')
+}
+
 module.exports = {
     controladorCarrito,
     controladorHome,
     controladorLogin,
     controladorRegister,
-    controladorCreate
+    controladorCreate,
+    controladorEditar,
 }

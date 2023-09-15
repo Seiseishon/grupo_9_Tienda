@@ -16,8 +16,11 @@ app.use(methodOverride('_method'));
 const router = require('./src/routes');
 const routerProduct = require('./src/routes/productos');
 const routerCreate=require('./src/routes/create');
+const routerEditar=require('./src/routes/editar')
+
 const controladorProducts = require('./src/controllers/productos');
 const controladorCreate = require('./src/controllers/create');
+const controladorEditar = require('./src/controllers/editar');
 
 
 app.set('view engine', 'ejs')

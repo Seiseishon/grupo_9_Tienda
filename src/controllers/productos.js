@@ -58,7 +58,19 @@ const controladorProducts = {
         fs.writeFileSync(path.resolve(__dirname, '../datos/datos.json'), data)
         const producto = productos.find(p => p.id == id);
         res.redirect('/');
-    }
+    },
+
+    editar: (req, res) => {
+        const id = req.params.id;
+        const productoEditado = products.find (p=> p.id == id);
+        res.render ('editar.ejs', {
+            productoEditado
+        })
+    },
+
+    update: (req, res) => {
+        res.send('Producto actualizado recibido')
+    },
 }
 
 
