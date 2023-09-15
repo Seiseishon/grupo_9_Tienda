@@ -4,10 +4,11 @@ const fs = require('fs');
 const path = require('path');
 
 
-const dato = ()=>{
+
+const dato = () => {
     const rawDatos = fs.readFileSync(path.resolve(__dirname, '../datos/datos.json'), 'utf-8')
-   
-   return JSON.parse(rawDatos);
+
+    return JSON.parse(rawDatos);
 }
 
 const controladorProducts = {
@@ -15,7 +16,12 @@ const controladorProducts = {
         res.render('create')
     },
     detail: function (req, res) {
-        res.render('productDetail')
+        const products = dato();
+        const id = req.params.id;
+        const product = products.find(p => p.id == id);
+        res.render('productDetail', {
+            product
+        })
     },
     create: function (req, res) {
         const newProduct = {
@@ -25,7 +31,7 @@ const controladorProducts = {
             img: req.body.image,
             ver: "ver mas...",
             carrito: "carrito.jpg",
-            envio:"$" + req.body.envio,
+            envio: "$" + req.body.envio,
 
         }
         const products = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../datos/datos.json'), 'Utf8'))
@@ -36,22 +42,23 @@ const controladorProducts = {
         fs.writeFileSync(path.resolve(__dirname, '../datos/datos.json'), data)
         res.redirect('/')
     },
-    producto: function (req,res){
+    producto: function (req, res) {
         const products = dato()
-        res.render('productos',{
+        res.render('productos', {
             products
         })
     },
-    destroy:(req, res)=> {
-        const products = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../datos/datos.json'), 'Utf8'))
-       const deleteId =req.params.id;
-       const deleteUltimo=products.filter(products=>products.id !=deleteId);
-       const deleteGuardar=JSON.stringify(deleteUltimo,null,2)
-       fs.writeFileSync(path.resolve(__dirname,'../datos/datos.json'),deleteGuardar);
-       res.redirect('/')
-    },
+    destroy: (req, res) => {
+        let productos = dato();
 
-    
+        const id = +req.params.id;
+        console.log(id);
+        let productosEliminar = productos.filter(p => p.id !== id);
+        const data = JSON.stringify(productosEliminar);
+        fs.writeFileSync(path.resolve(__dirname, '../datos/datos.json'), data)
+        const producto = productos.find(p => p.id == id);
+        res.redirect('/');
+    }
 }
 
 

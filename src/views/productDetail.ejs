@@ -48,7 +48,7 @@
 
       <div class="producto-info">
         <div class="info">
-          <h1>Nombre del Producto</h1>
+          <h1><%=product.name%></h1>
           <div class="estrellas">
             <i class="fa-regular fa-star" style="color: #fbff00"></i>
             <i class="fa-regular fa-star" style="color: #fbff00"></i>
@@ -60,7 +60,7 @@
           <h2>Ofrecido por: Nombre del vendedor/Tienda</h2>
         </div>
         <div class="precio">
-          <h2 class="precio">ARS$2000</h2>
+          <h2 class="precio">ARS$<%=product.price%></h2>
         </div>
         <div class="opcionesproducto">
           <h2>Opciones del Producto</h2>
@@ -79,7 +79,6 @@
           </p>
         </div>
       </div>
-
       <div class="datos">
         <div class="acciones">
           <a href="#">Comprar Ahora</a>

@@ -14,7 +14,7 @@
                 </div>
                 <div class="desc-producto">
                     <h1>
-                        <%=product.name %>
+                        <%=product.name%>
                     </h1>
                     <h2>ARS$<%=product.price %>
                     </h2>
@@ -33,9 +33,13 @@
             </article>
         </a>
         <div class="desaparece-aparece">
-        <div><a href="/products/productDetail<%=product.id%>">Caracteristicas</a></div>
+            <form action="/products/productsDetail/<%=product.id%>">
+                <button>Caracteristicas</button>
+            </form>
         <div><a href="">Eitar</a></div>
-        <div><a href="/products/delete">Borrar</a></div>
+        <form action="/products/delete/<%=product.id%>" method="post">
+            <button>Borrar</button>
+        </form>
         </div>
         <% }) %>
         
