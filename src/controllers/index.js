@@ -21,23 +21,10 @@ const controladorCarrito = (req,res)=>{
 
 
 
-const controladorLogin = (req,res)=>{
-    res.render('login')
-}
-
 const controladorRegister = (req,res)=>{
     res.render('register')
 }
 
-const controladorCreate = (req,res)=>{
-    let usuario = {
-       nombreYApellido: req.body.nombre,
-       email:  req.body.email,
-       domicilio:req.body.domicilio,
-       contraseña: req.body.contraseña
-    }
-    res.send(usuario)
-}
 
 const controladorEditar = (req,res)=>{
     res.render('editar')
@@ -46,8 +33,6 @@ const controladorEditar = (req,res)=>{
 module.exports = {
     controladorCarrito,
     controladorHome,
-    controladorLogin,
     controladorRegister,
-    controladorCreate,
     controladorEditar,
 }
