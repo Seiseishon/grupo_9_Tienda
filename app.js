@@ -21,6 +21,7 @@ const routerEditar=require('./src/routes/editar')
 const controladorProducts = require('./src/controllers/productos');
 const controladorCreate = require('./src/controllers/create');
 const controladorEditar = require('./src/controllers/editar');
+const routerUser = require('./src/routes/user');
 
 
 app.set('view engine', 'ejs')
@@ -28,7 +29,7 @@ app.set('views', './src/views')
 
 app.use(express.static('public'))
 app.use('/products',routerProduct);
-
+app.use(routerUser)
 app.use(router);
 
 

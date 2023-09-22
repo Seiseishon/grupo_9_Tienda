@@ -28,7 +28,7 @@ const controladorProducts = {
             id: new Date().getTime(),
             name: req.body.name,
             price: req.body.price,
-            img: req.body.image,
+            img: req.file.filename,
             ver: "ver mas...",
             carrito: "carrito.jpg",
             envio: "$" + req.body.envio,
@@ -38,7 +38,6 @@ const controladorProducts = {
         products.push(newProduct)
 
         const data = JSON.stringify(products)
-        console.log(data)
         fs.writeFileSync(path.resolve(__dirname, '../datos/datos.json'), data)
         res.redirect('/')
     },
@@ -51,7 +50,6 @@ const controladorProducts = {
     destroy: (req, res) => {
         let productos = dato();
         const id = +req.params.id;
-        console.log(id);
         let productosEliminar = productos.filter(product => product.id !== id);
         const data = JSON.stringify(productosEliminar);
         fs.writeFileSync(path.resolve(__dirname, '../datos/datos.json'), data)
@@ -73,7 +71,7 @@ const controladorProducts = {
             id: req.params.id,
             name: req.body.name,
             price: req.body.price,
-            img: req.body.image,
+            img: req.file.filename,
             ver: "ver mas...",
             carrito: "carrito.jpg",
             envio: "$" + req.body.envio,

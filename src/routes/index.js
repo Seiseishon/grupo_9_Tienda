@@ -7,13 +7,7 @@ const router = express.Router();
 
 router.get('/', controladorHome);
 
-router.get('/login', controladorLogin);
-
 router.get('/carrito', controladorCarrito);
-
-router.get('/register', controladorRegister);
-
-router.post('/resgister', controladorCreate);
 
 router.get('/editar', controladorEditar);
 router.post('/update', controladorEditar);
