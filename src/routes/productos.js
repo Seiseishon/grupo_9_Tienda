@@ -26,7 +26,7 @@ routerProduct.post('/create', upload.single('image'), controladorProducts.create
 routerProduct.get('/delete', controladorProducts.destroy);
 routerProduct.post('/delete/:id', controladorProducts.destroy);
 routerProduct.get('/editar/:id', controladorProducts.editar);
-routerProduct.post('/editar/:id', controladorProducts.update);
+routerProduct.post('/editar/:id',upload.single('foto'), controladorProducts.update);
 
 
 module.exports = routerProduct;
