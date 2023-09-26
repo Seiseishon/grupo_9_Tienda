@@ -16,7 +16,10 @@ const controladorHome = (req,res)=>{
 }
 
 const controladorCarrito = (req,res)=>{
-    res.render('carrito')
+    const products = datos();
+    res.render('carrito',{
+        products
+    })
 }
 
 
