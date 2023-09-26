@@ -1,6 +1,6 @@
 const express = require('express');
-
-
+const session = require('express-session');
+const routerUser = require('./src/routes/user');
 
 
 const app = express ();
@@ -11,7 +11,12 @@ app.use(express.json());
 
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
-
+app.use(session({secret: 'asdasdasfasdgsdfgksjd'}));
+app.use(express.urlencoded({
+    extended: true,
+    resave: true,
+    saveUninitialized: true,
+}));
 
 const router = require('./src/routes');
 const routerProduct = require('./src/routes/productos');
@@ -21,12 +26,15 @@ const routerEditar=require('./src/routes/editar')
 const controladorProducts = require('./src/controllers/productos');
 const controladorCreate = require('./src/controllers/create');
 const controladorEditar = require('./src/controllers/editar');
-const routerUser = require('./src/routes/user');
+const mainRouter = require('./src/routes/mainRouter');
+
 
 
 app.set('view engine', 'ejs')
 app.set('views', './src/views')
 
+app.use("/",mainRouter);
+app.use("/user",routerUser);
 app.use(express.static('public'))
 app.use('/products',routerProduct);
 app.use(routerUser)

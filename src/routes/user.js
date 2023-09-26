@@ -20,7 +20,8 @@ const upload = multer({storage})
 routerUser.get('/register', controladorUser.registro);
 routerUser.post('/register', upload.single('foto'), controladorUser.userRegistrado)
 
-routerUser.get('/login', controladorUser.login)
 
+routerUser.get('/login', controladorUser.login)
+routerUser.post('/login', controladorUser.loginProcess)
 
 module.exports = routerUser

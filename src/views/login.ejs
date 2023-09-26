@@ -31,13 +31,17 @@
 
 
     <main>
-        <form class="cuerpo-formulario">
+        <form class="cuerpo-formulario" action="/user/login" method="post">
             <div class="formulario">    
-            <label class="label" for="usuario">Nombre de Usuario:</label>
-            <input class="label" type="text"name="usuario" required pattern=".{4,}" title="usuario" class="control">
-        
+            <label class="label" for="usuario">Email:</label>
+            <input class="label" type="text"name="email"  class="form-control">
+            <% if(locals.errors && errors.email){ %>
+                <div class="text-danger" style="color: red;">
+                    <%= errors.email.msg %>
+                </div>
+                <% } %>
             <label class="label" for="contrasena">Contraseña:</label>
-            <input class="label" type="password"name="contrasena" required pattern=".{8,}" placeholder="Ingresa almenos 8 caracteres" class="control">
+            <input class="label" type="password" name="password"  class="control">
 
         
             <button type="submit" class="boton">Enviar</button>
