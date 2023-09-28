@@ -1,253 +1,63 @@
+/*-----Aplicando css global-----*/
 *{
     margin: 0%;
     padding: 0%;
     box-sizing:border-box ;
+    font-family: sans-serif;
 }
 body{
     min-width: auto;
-    background-color: #9452b3;
+    background-color: #201247;
 }
-header{
-    background-color: #c898db;
-    padding:  20px ;
-    top: 0;
-    width: 100%;
-}
-
-body {font-family: 'Edu SA Beginner', cursive;
-font-family: 'Playfair Display', serif;
-font-family: 'Roboto', sans-serif;
-}
-
-.items-menu{
-    background-color: white;
-    color:  #460F60;
-    display: block;
-    padding: 10px;
-    border-radius: 6px;
-    text-align: center;
-    font-size: 20px;
-    border-top: 5px;
-    height: 40px;
-    transition: .3s ease-in-out all;
-}
-.items-menu:hover{
-    transform: scale(1.05);
-}
-.items-carrito{
-    color: #460F60;
-    font-size: 33px;
-    padding-left: 10px;
-    transition: .3s ease-in-out all;
-    }
-    .items-carrito:hover{
-        transform: scale(1.20);
-}
-.personal{
-    font-size: 35px;
-    color: #460F60;
-    position: absolute;
-    padding-left: 80%;
-    top: 20px;
-}
-h1{
-    display: none;
-}
-.buscador {
-    position: relative;
-    transition: .3s ease-in-out all;
-    width: 40%;
-    left: 30%;
-}
-
-.buscador input {
-    width: 100%;
-    padding: 10px;
-    padding-right: 20px;
-    border-radius: 15px 0 0 15px;
-    border: 0;
-    outline: none;
-}
-
-.buscador:hover {
-    transform: scale(1.05);
-}
-
-.buscador button {
-    background-color: white;
-    padding: 10px;
-    border: 0;
-    margin: auto;
-    border-radius: 0 15px 15px 0;
-    cursor: pointer;
-}
-
-
-
-
-
-
-
-.carrito-compra{
-    width: 50px;
-    padding-left: 15px;
-    height: 40px;
-}
-.esquina-iz{
+/*------Aplicando css al main-----*/
+.contenedor-login{
     display: flex;
-}
-.cuenta{
-    width: 40px;
-    border-radius: 22px;
-    height: 40px;
-}
-.parte-superior{
-    display: flex;
-    justify-content: space-between;
-}
-form{
-    display: flex;
-    padding-top: 20px;
-    justify-content: center;
-    padding-bottom: 20px;
-}
-.icono-buscar{
+    flex-direction: column;
     align-items: center;
-}
-.navbar{
-    display: none;
-}
-a{
-    color: black;
-    text-decoration: none;
-    font-size: 12px;
-    padding: 5px;
-}
-
-
-main{
-    padding-top: 8%;
-    padding-bottom: 8%;
-}
-.cuerpo-formulario{
-   
-    background-color: white;
-    border-radius: 20px;
+    padding: 60px 40px 60px 40px;
+    gap: 1.5em;
     width: 70%;
     margin: auto;
-    padding: 10px;
+    background-color: white;
+    border-radius: 2%;
+    margin:auto;
+    margin-top: 40px;
+    margin-bottom: 40px;;
 }
-.formulario{
+.titulo h2{
+    font-size: 1.5em;
+}
+.caja-datos{
     width: 100%;
+   }
+   .caja-datos .datos{
+       width: 100%;
+       padding: 0.5em;
+   }
+   .pregunta p{
+       text-decoration: none;
+   }
+   .boton button{
+       color: white;
+       background-color: #460F60;
+       border: none;
+       width: 100%;
+       margin-top: 1em;
+       padding: 0.5em;
+       cursor: pointer;
+       transition: .3s ease all;
+   }
+   .boton button:hover{
+       background: #59147a
+   }
+   @media (min-width: 769px){
+    .contenedor-login{
+        max-width: 40%;
+    }
 }
-.label{
-    display: flex;
-    margin: 10px;
-    align-items: center;
-    width: 70%;
-}
-.boton{
-    border-radius: 5px;
-    background-color: #c898db;
-    color: white;
-    padding: 10px 20px;
-    margin-top: 10px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: 100%;
-    transition: .3s ease-in-out all;
+@media(max-width:480px){
+    .contenedor-login{
+        max-width: 80%;
+    }
 }
 
-.boton:hover {
-    background-color: #460F60;
-    transform: scale(1.05);
-} 
-
-footer{
-    padding: 20px;
-    text-align: center;
-    background-color: #c898db;
-    width: 90%;
-    margin: auto;
-    border-radius: 10px
-}
-@media(min-width: 660px){
-    header{
-        height: 200px;
-    }
-    h1{
-        display: block;
-        font-family: 'Caprasimo',cursive;
-        font-size: 25px;
-        color: black;
-        text-shadow: 1px 0px 0px white,
-                     0px 1px 0px white,
-                     -1px 0px 0px white,
-                     0px -1px 0px white;
-                     
-                     
-    }
-    .logo{
-        width: 35%;
-        text-align: center;
-        
-    }
-    .cuenta{
-        right: 10%;
-        position: absolute;
-        top: 54px;
-    }
-    .esquina-iz{
-        position: absolute;
-        left: 90%;
-        top: 65px;
-    }
-    .personal{
-        top: 65px;
-        left: 5%;
-    }
-    .subir form{
-        position: absolute;
-        top: 8%;
-        left: 45%;
-    }
-    .items-menu{
-        display: none;
-    }
-    .carrito-compra{
-        position: relative;
-        top: 33px;
-        width: 55px;
-    }
-    .agrandar{
-        width: 30%;
-    }
-    .renglon-busqueda{
-        width: 100%;
-        height: 40px;
-        border-radius: 10px;
-
-    }
-    .submit-clickable{
-        font-size: 30px;
-        border-radius: 10px;
-        width: 40px;
-    }
-    .cuerpo-formulario{
-        width: 60%;
-    }
-    .boton{
-        font-size: 20px;
-    }
-    .buscador{
-        bottom: 30px;
-        left: 38%;
-    }
-    form{
-        padding-top: 0;
-    }
-    .label{
-        width: 60%;
-    }
-}
