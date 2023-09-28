@@ -1,95 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/formulario.css">
-    <link rel="logo" type="images/OpenMarket logo_4.png" href="images/OpenMarket logo_4.png">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Edu+SA+Beginner&family=Playfair+Display:wght@500&family=Roboto&display=swap" rel="stylesheet">
-    <title>Formulario</title>
-</head>
-<body>
-    <header>
-        <div class="parte-superior">
-            <div class="esquina-iz">
-                <div class="items-menu">
-                <i class="fas fa-bars"></i>
+
+<link rel="stylesheet" href="/css/register.css">
+<!-- Head -->
+<%-include('./partials/head')%>
+<!-- Head -->
+    <body>
+        <!-- Header -->
+        <%- include('./partials/header') %>
+        <!-- Header-->
+
+            <main>
+                <form action="/register" method="post" enctype="multipart/form-data">
+                <div class="contenedor-register">
+                    <div class="titulo">
+                        <h2>Registrate</h2>
+                    </div>
+
+                    <div class="caja-datos">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" required pattern=".{4,}" class="datos">
+                    </div>
+                    <div class="caja-datos">
+                        <label for="contraseña">Contraseña</label>
+                        <input type="password" name="contrasena" required class="datos">
+                    </div>
+                    <div class="caja-datos">
+                        <label for="confirmar">Confirma tu contraseña</label>
+                        <input type="password" name="confirmar" required class="datos">
+                    </div>
+                    <div class="caja-datos">
+                        <label for="nacimiento">Fecha de nacimiento</label>
+                        <input type="date" name="nacimiento" required class="datos">
+                    </div>
+                    <div class="caja-datos">
+                        <label for="domicilio">Domicilio</label>
+                        <input type="text" name="domicilio" required pattern=".{5,}" class="datos">
+                    </div>
+                    <div class="caja-datos">
+                        <label for="perfil">Perfil de usuario</label>
+                        <select name="perfil">
+                            <option value="comprador">Comprador</option>
+                            <option value="vendedor">Vendedor</option>
+                        </select>
+                    </div>
+                    <div class="caja-datos">
+                        <label for="nombre">Nombre y Apellido</label>
+                        <input type="text" name="nombre" required pattern=".{6,}" class="datos">
+                    </div>
+                    <div class="caja-datos">
+                        <label for="foto">Foto de perfil</label>
+                        <input type="file" name="foto" accept=".jpg" class="datos">
+                    </div>
+                    <div class="botones">
+                        <button class="enviar" type="submit">Enviar</button>
+                        <button class="borrar" type="reset">Borrar</button>
+                    </div>
                 </div>
-                <div class="items-carrito">
-                <i class="fas fa-shopping-cart"></i>
-                </div>
-            </div>
-            <div class="logo">
-            <h1>OPEN MARKET</h1>
-            </div>
-        </div>
-        <div class="buscador">
-            <form class="form" action="/register/user"  method="POST"> 
-                <input type="text" placeholder="Buscar..." />
-                <button><i  class="fa fa-search lupa"></i></button>
             </form>
-        </div>
-        <div class="personal"><i class="fas fa-user-circle"></i></div>
-    </header>
-    <main>
-        <form action="/register" method="post" enctype="multipart/form-data" class="form-form">
-            
-            <div class="nombre-usuario">
-            <label for="nombre">Nombre y Apellido:</label>
-            <input type="text"name="nombre" required pattern=".{6,}" class="control">
-            
-            <label for="email">Email:</label>
-            <input type="email"name="email" required pattern=".{4,}" class="control">
-            </div>
+            </main>
+            <!-- Footer -->
+            <%- include('partials/footer') %>
+            <!-- /Footer -->
+    </body>
 
-            <div class="fecha-domicilio">
-            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
-            <input type="date"name="fechaNacimiento" required class="control">
-        
-            <label for="domicilio">Domicilio:</label>
-            <input type="text"name="domicilio" required pattern=".{5,}" class="control">
-
-
-            <label for="perfil">Perfil de Usuario:</label>
-            <select name="perfil">
-              <option value="comprador">Comprador</option>
-              <option value="vendedor">Vendedor</option>
-            </select>
-            </div>
-        
-            <div class="Interés">   
-            <label>Categorías de Interés:</label>
-               
-              
-              <label><input type="checkbox" value="electro">  Electro</label>
-              <label><input type="checkbox" value="moda">  Moda</label>
-              <label><input type="checkbox" value="hogar">  Hogar</label>
-              <label><input type="checkbox" value="juguetes">  Juguetes</label>
-              <label><input type="checkbox" value="vidaSana">  Vida Sana</label>
-              </div>
-            
-        
-            <label for="foto">Foto de Usuario:</label>
-            <input type="file" name="foto" accept=".jpg" class="control">
-        
-            <div class="Contraseña-confirmar">
-            <label for="contrasena">Contraseña:</label>
-            <input type="password"name="contrasena" required pattern=".{8,}" class="control">
-        
-            <label for="confirmarContrasena">Confirmar Contraseña:</label>
-            <input type="password"name="confirmarContrasena" required class="control">
-            </div>
-            <div class="enviar-campos">
-            <button type="submit" class="boton">Enviar</button>
-            <button type="reset" class="boton">Limpiar Campos</button>
-            </div>
-          </form>
-
-    </main>
-    
-</body>
 </html>
