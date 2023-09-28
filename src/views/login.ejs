@@ -9,7 +9,7 @@
     <%- include('./partials/header') %>
     <!-- Header-->
         <main>
-            <form action="/login" method="post">
+            <form action="/user/login" method="post">
             <div class="contenedor-login">
                 
                 <div class="titulo">
@@ -17,11 +17,16 @@
                 </div>
                 <div class="caja-datos">
                     <p>Email</p>
-                    <input class="datos" type="email" name="email" id="email" required>
+                    <input class="label datos" type="text"name="email"  class="form-control">
+                    <% if(locals.errors && errors.email){ %>
+                        <div class="text-danger" style="color: red;">
+                            <%= errors.email.msg %>
+                        </div>
+                        <% } %>
                 </div>
                 <div class="caja-datos">
                     <p>Contraseña</p>
-                    <input class="datos" type="password" name="contraseña" id="contraseña" required>
+                    <input class="datos" type="password" name="password" id="contraseña">
                 </div>
                 <div class="checkbox">
                     <label><input type="checkbox"> Recordarme</label>

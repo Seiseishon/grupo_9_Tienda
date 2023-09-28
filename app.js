@@ -4,7 +4,7 @@ const routerUser = require('./src/routes/user');
 
 
 const app = express ();
-const PORT = 3001
+const PORT = 3000
 
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
