@@ -12,7 +12,7 @@ Seguir mostrando  los resultados o el progreso que realiza cada uno en el proyec
 
 4 -Cosas que devemos hacer menos:
 
-Comunicarse poco ,no tirar ideas u opiniones.
+Comunicarse poco, no tirar ideas u opiniones.
 
 5- Cosas que devemos dejar de hacer:
 
@@ -37,3 +37,5 @@ Sprint 4
 
  5- Cosas que devemos dejar de hacer:
  Dejar para el ultimo momento en sprint
+
+ Sprint 5
