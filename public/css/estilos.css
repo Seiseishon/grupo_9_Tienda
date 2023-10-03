@@ -46,7 +46,7 @@
   
   .btns-nav a {
       color: black;
-      background-color: white;
+      /*background-color: white;*/
       padding: 10px 20px;
       border-radius: 15px;
       transition: .3s ease-in-out all;
