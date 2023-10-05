@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/profile.css">
+    <title>login</title>
+    <%-include('partials/head')%>
+</head>
+    <body class="bodyLogin">
+        <!-- Header -->
+        <%- include('partials/header') %>
+        <!-- /Header -->
+        <body>
+            <div class="profile-card">
+                
+                <h2>Hola <%= user.fullName %> </h2>
+                <img src="/images/imagenesDeUsuario/<%= user.avatar %> " alt="Imagen de perfil">
+                <p><%= user.email %></p>
+            </div>
+        </body>
+            <!-- Footer -->
+	        <%- include('partials/footer') %>
+	        <!-- /Fototer -->
+    </body>
+</html>

@@ -1,7 +1,7 @@
 const express = require('express');
-const session = require('express-session');
-const routerUser = require('./src/routes/user');
 
+const routerUser = require('./src/routes/user');
+const session = require('express-session');
 
 const app = express ();
 const PORT = 3000
@@ -11,11 +11,10 @@ app.use(express.json());
 
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'));
-app.use(session({secret: 'asdasdasfasdgsdfgksjd'}));
-app.use(express.urlencoded({
-    extended: true,
-    resave: true,
-    saveUninitialized: true,
+app.use(session({
+    secret: "Secret",
+    resave: false,
+    saveUninitialized: false,
 }));
 
 const router = require('./src/routes');

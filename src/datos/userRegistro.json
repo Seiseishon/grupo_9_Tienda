@@ -1,10 +1,10 @@
-[{
-    "id": 1,
-    "nombre": "",
-    "email": "",
-    "fechaNacimiento": "",
-    "Domicilio": "",
-    "foto": "",
-    "contraseña": "",
-    "confirmarContrasena": ""
-}]
+[
+ {
+  "id": 1,
+  "nombre": "alvaro",
+  "email": "alvaro@gmail.com",
+  "password": "$2a$10$I6Yai.rNm1rEDUF5ZvjWiuup/4ASQIRA6gyMPjDwGnlr7i4pns7bq",
+  "country": "argentina",
+  "avatar": "foto-1696549147138.png"
+ }
+]
