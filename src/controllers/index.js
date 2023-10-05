@@ -36,10 +36,16 @@ const controladorEditar = (req,res)=>{
 const controladorLoginView = (req,res)=>{
     res.render('login')
 }
+
+const controladorUser = (req, res)=>{
+    res.render('user')
+}
+
 module.exports = {
     controladorCarrito,
     controladorHome,
     controladorRegister,
     controladorEditar,
     controladorLoginView,
+    controladorUser,
 }

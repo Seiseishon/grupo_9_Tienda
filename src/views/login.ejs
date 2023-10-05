@@ -1,68 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
     <link rel="stylesheet" href="/css/login.css">
-    <title>login</title>
+    <!-- Head -->
     <%-include('./partials/head')%>
-</head>
+    <!-- Head -->
 <body>
-    <header>
-        <div class="parte-superior">
-            <div class="esquina-iz">
-                <div class="items-menu">
-                <i class="fas fa-bars"></i>
+    <!-- Header -->
+    <%- include('./partials/header') %>
+    <!-- Header-->
+        <main>
+            <form action="/user/login" method="post">
+            <div class="contenedor-login">
+                
+                <div class="titulo">
+                    <h2>Iniciar sesion</h2>
                 </div>
-                <div class="items-carrito">
-                <i class="fas fa-shopping-cart"></i>
+                <div class="caja-datos">
+                    <p>Email</p>
+                    <input class="label datos" type="text"name="email"  class="form-control">
+                    <% if(locals.errors && errors.email){ %>
+                        <div class="text-danger" style="color: red;">
+                            <%= errors.email.msg %>
+                        </div>
+                        <% } %>
                 </div>
-            </div>
-            <div class="logo">
-            <h1>OPEN MARKET</h1>
-            </div>
-        </div>
-        <div class="buscador">
-            <form action="get">
-                <input type="text" placeholder="Buscar..." />
-                <button><i  class="fa fa-search lupa"></i></button>
-            </form>
-        </div>
-        <div class="personal"><i class="fas fa-user-circle"></i></div>
-    </header>
-
-
-    <main>
-        <form class="cuerpo-formulario" action="/user/login" method="post">
-            <div class="formulario">    
-            <label class="label" for="usuario">Email:</label>
-            <input class="label" type="text"name="email"  class="form-control">
-            <% if(locals.errors && errors.email){ %>
-                <div class="text-danger" style="color: red;">
-                    <%= errors.email.msg %>
+                <div class="caja-datos">
+                    <p>Contraseña</p>
+                    <input class="datos" type="password" name="password" id="contraseña">
                 </div>
-                <% } %>
-            <label class="label" for="contrasena">Contraseña:</label>
-            <input class="label" type="password" name="password"  class="control">
-
-        
-            <button type="submit" class="boton">Enviar</button>
+                <div class="checkbox">
+                    <label><input type="checkbox"> Recordarme</label>
+                </div>
+                <div class="pregunta">
+                    <p><a href="#">¿Olvidaste tu contraseña</a></p>
+                </div>
+                <div class="caja-datos">
+                    <div class="boton">
+                        <button type="submit" href="#"><span>ENVIAR</span></button>
+                    </div>
+                </div>
+            
             </div>
         </form>
-
-
-    </main>
-    <footer>
-        <div class="Herramientas">
-             <a class="a" href="#">Comunidad</a>
-             <a class="a" href="#">Nuestras Redes</a>
-             <a class="a" href="#">Acerca De</a>
-             <a class="a" href="#">Herramientas</a>
-             <a class="a" href="#">Política de Privacidad</a>
-             <a class="a" href="#">Aviso Legal</a>
-             <a class="a" href="#">Condiciones de Uso</a>
-        </div>
-        <a href="#">Open Market Inc 2023 Dirección Wall Street 298</a>
-        
-    </footer>
-    
+        </main>
+        <!-- Footer -->
+        <%- include('partials/footer') %>
+        <!-- /Footer -->
 </body>
 </html>
