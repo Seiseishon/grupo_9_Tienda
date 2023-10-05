@@ -28,7 +28,7 @@ const controladorUser = {
     },  
     registro: function(req,res){
         const datos = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../datos/userRegistro.json'), 'Utf8'))
-        datos.push(usuarios)
+        //datos.push(usuarios)
         res.render('register')
     },
     userRegistrado: function(req,res){
