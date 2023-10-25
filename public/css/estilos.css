@@ -6,7 +6,7 @@
 
 /* HEADER PC */
 
-.pc .nav-inicio {
+.encabezado .nav-inicio {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -26,25 +26,25 @@
       color: white;
   }
   
-  .btns-nav {
+  .botns-nav {
       display: flex;
       gap: 30px;
       padding: 1% 0 1% 0;
   }
 
-  .btns-nav i {
+  .botns-nav i {
     cursor: pointer;
     font-size: 35px;
     color: white;
     transition: .3s ease-in-out all;
   }
 
-  .btns-nav i:hover {
+  .botns-nav i:hover {
     transform: scale(1.1);
     color: rgba(255, 255, 255, 0.658);
   }
   
-  .btns-nav a {
+  .botns-nav a {
       color: black;
       /*background-color: white;*/
       padding: 10px 20px;
@@ -52,7 +52,7 @@
       transition: .3s ease-in-out all;
   }
   
-  .btns-nav a:hover {
+  .botns-nav a:hover {
       transform: scale(0.9);
   }
   
@@ -255,7 +255,7 @@ p{
 }
 
 @media(max-width:480px){
-    .pc {
+    .encabezado {
         display: none;
     }
 .contenedor{
@@ -340,16 +340,11 @@ li{
     left: 5%;
 }
 .logo{
-    position: relative;
+    /*position: relative;*/
     bottom: 15px;
-    height: 50px;
     left: 27%;
-    border-radius: 50%;
     width: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
+  
 }
 
 .banner{
