@@ -32,7 +32,6 @@ const mainRouter = require('./src/routes/mainRouter');
 app.set('view engine', 'ejs')
 app.set('views', './src/views')
 
-app.use("/",mainRouter);
 app.use("/user",routerUser);
 app.use(express.static('public'))
 app.use('/products',routerProduct);
