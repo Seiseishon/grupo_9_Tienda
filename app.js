@@ -25,12 +25,13 @@ const routerEditar=require('./src/routes/editar')
 const controladorProducts = require('./src/controllers/productos');
 const controladorCreate = require('./src/controllers/create');
 const controladorEditar = require('./src/controllers/editar');
-const mainRouter = require('./src/routes/mainRouter');
+
 
 
 
 app.set('view engine', 'ejs')
 app.set('views', './src/views')
+
 
 app.use("/user",routerUser);
 app.use(express.static('public'))
