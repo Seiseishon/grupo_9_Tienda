@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+    <title>Ingresa</title>
     <link rel="stylesheet" href="/css/login.css">
-    <!-- Head -->
+
     <%-include('./partials/head')%>
-    <!-- Head -->
-<body>
-    <!-- Header -->
-    <%- include('./partials/header') %>
-    <!-- Header-->
+
+ <body>  
+      <%- include('./partials/header') %>
+ 
         <main>
             <form action="/user/login" method="post">
             <div class="contenedor-login">
@@ -32,19 +32,20 @@
                     <label><input type="checkbox"> Recordarme</label>
                 </div>
                 <div class="pregunta">
-                    <p><a href="#">¿Olvidaste tu contraseña</a></p>
+                    <p><a href="#">¿Olvidaste tu contraseña?</a></p>
+                    <p>o ¿Todavia no tenes cuenta?</p>
+                    <p><a href="/register">Registrate</a></p>
                 </div>
                 <div class="caja-datos">
                     <div class="boton">
-                        <button type="submit" href="#"><span>ENVIAR</span></button>
+                        <button type="submit" href="/profile"><span>ENVIAR</span></button>
                     </div>
                 </div>
             
             </div>
         </form>
         </main>
-        <!-- Footer -->
-        <%- include('partials/footer') %>
-        <!-- /Footer -->
-</body>
+
+      <%- include('partials/footer') %> 
+ </body>
 </html>

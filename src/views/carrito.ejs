@@ -1,85 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+ <head>
+      <%- include('partials/head') %>
+      <title>Mi Carrito</title>
+     <link rel="stylesheet" href="/css/carrito.css">
+ </head>
+ 
+ <body>
+     <%- include('partials/header') %>
 
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/carrito.css">
-    <title>Open Market</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="logo" type="images/OpenMarket logo_4.png" href="images/OpenMarket logo_4.png">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Edu+SA+Beginner&family=Playfair+Display:wght@500&family=Roboto&display=swap" rel="stylesheet">
-</head>
-
-<body>
-    <header>
-        <div class="personal"><i class="fas fa-user-circle"></i></div>
-        <a href="/carrito"><img class="carrito-compra" src="/images/burger menu (3).png" alt="carrito"></a>
-        <button class="burger1"><i class="fas fa-bars burger"></i></button>
-        <div class="row-header">
-            <div class="logo">
-                <a class="logo" href="/"><h1>OPEN MARKET</h1></a>
-            </div>
-            <div class="buscador">
-                <form action="get">
-                    <input type="text" placeholder="Buscar..." />
-                    <button><i  class="fa fa-search lupa"></i></button>
-                </form>
-            </div>
-            <nav class="navbar">
-                <ul class="navbar-items">
-                    <a href="#">
-                        <li>Crea tu ceunta</li>
-                    </a>
-                    <a href="#">
-                        <li>Mi cuenta</li>
-                    </a>
-                    <a href="#">
-                        <li>Mi carrito</li>
-                    </a>
-                </ul>
-                <ul class="navbar-items">
-                    <a href="#">
-                        <li>Categorias</li>
-                    </a>
-                    <a href="#">
-                        <li>Ofertas del dia</li>
-                    </a>
-                    <a href="#">
-                        <li>Ayuda</li>
-                    </a>
-                </ul>
-            </nav>
-        </div>
-        <div class="flecha"><i class="fas fa-arrow-left flecha"></i></div>
-        <div class="ubi"><i class="fas fa-map-marker-alt ubi"></i></div>
-        <h3>Carrito de compras</h3>
-        <a class="ubicacion" href="/ubicacion">Enviar a</a>
-    </header>
-    <main>
-    <article>
-        <div class="imagen-nombre">
-        <img class="imagen" src="/images/auriculares.jpeg" alt="">
-        <p class="nombre">Auriculares inalámbricos JBL Tune 510BT JBLT510BT</p>
-        </div>
-        <div class="boton-comprar">
-        <button class="boton" type="reset">Eliminar</button>
-        <button class="comprar" type="submit">Guardar</button>
-        </div>
-        <div class="junto">
+     <main>
+     
+      <article>
+          <div class="imagen-nombre">
+          <img class="imagen" src="/images/auriculares.jpeg" alt="">
+          <p class="nombre">Auriculares inalámbricos JBL Tune 510BT JBLT510BT</p>
+          </div>
+          <div class="boton-comprar">
+          <button class="boton" type="reset">Eliminar</button>
+          <button class="comprar" type="submit">Guardar</button>
+          </div>
+         <div class="junto">
             <form class="cantidad">
                <label for="quantity">Unidad:</label>
                <input type="number" id="quantity" name="quantity" min="1" max="5">
             </form>
             <p class="precio-solo">$ARS 34,499.00</p>
         </div>
-    </article>
-    
-    <div class="footer">
+     </article>
+     
+     <div class="footer">
         <div class="color-footer">
         <div class="total">
             <div class="precio">
@@ -95,8 +45,10 @@
         </div>    
         <button class="compra-final" type="submit">Continuar compra</button>
         </div>
-    </div>
-    </main>
-</body>
+      </div>
+     </main>
+
+     <%- include('partials/footer') %>
+ </body>
 
 </html>

@@ -1,27 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
-<%-include('./partials/head') %>
-    <title>Open Market</title>
-    <link rel="stylesheet" href="/css/productDetailStyle.css" />
+   <%-include('./partials/head') %>
 
+    <title>Detalles del Producto</title>
+    <link rel="stylesheet" href="/css/productDetailStyle.css" />
   </head>
+
   <body>
-    <nav class="nav-inicio">
-      <a class="nav-icon" href="./index.html">
-        <h1>OpenMarket</h1>
-      </a>
-      <div class="buscador">
-        <input type="text" placeholder="Buscar..." />
-        <button><i class="fa-solid fa-magnifying-glass"></i></button>
-      </div>
-      <div class="btns-nav">
-        <a href="./contacto.html">Ingresar</a>
-        <a href="./form.html">Registrarse</a>
-        <a href="./encargo.html">Carrito</a>
-        <a href="./create.ejs">Crear</a>
-      </div>
-    </nav>
+
+    <%-include('./partials/header') %>
+
+  
 
     <div class="nav-pag">
       <a href="#">Volver</a><span class="barra">|</span> <a href="#">Volver</a
@@ -184,24 +174,7 @@
         </div>
       </div>
     </article>
-
-    <footer>
-      <div class="footer-1">
-        <a href="#">Contacto</a>
-        <a href="#">Contacto</a>
-        <a href="#">Contacto</a>
-        <a href="#">Contacto</a>
-        <a href="#">Contacto</a>
-        <a href="#">Contacto</a>
-      </div>
-      <div class="footer-2">
-        <a href="#">Contacto</a>
-        <a href="#">Contacto</a>
-        <a href="#">Contacto</a>
-      </div>
-      <div class="footer-3">
-        <h1>Hecho por :3</h1>
-      </div>
-    </footer>
+   <%-include('./partials/footer') %>
+    
   </body>
 </html>

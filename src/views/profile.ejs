@@ -1,22 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <link rel="stylesheet" href="/css/profile.css">
-    <title>login</title>
+
+    <title>Mi cuenta</title>
+
     <%-include('partials/head')%>
+
 </head>
-    <body class="bodyLogin">
-        <!-- Header -->
-        <%- include('partials/header') %>
-        <!-- /Header -->
-        <body>
-            <div class="profile-card">
+   <body>
+     
+     <%- include('./partials/header') %>
+
+     <main>
+
+           <div class="profile-card">
                 
                 <h2>Hola <%= user.fullName %> </h2>
                 <img src="/images/imagenesDeUsuario/<%= user.avatar %> " alt="Imagen de perfil">
                 <p><%= user.email %></p>
+         </div>
+        
+
+         <div class="Administrar-40">
+              <h3>MIS PRODUCTOS</h3><a href="/products/listado">Administrar</a>
             </div>
-        </body>
+
+         <div>
+            <img class="banner" src="images/logoYbanner/Banner.gif" alt="banner">
+          </div>
+
+          <h3 class="ofertas">OFERTAS MAS DESTACADAS</h3>
+
+         <%-include('./partials/forEach') %>
+
+       </main>
+      
+
+     <h4>FORMAS DE PAGO</h4>
+        <section class="xd">
+            
+            <div class="tarjetas">
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-paypal"></i>
+            </div>
+
+         
+            <img src="/images/envio-a-tod.avif" alt="">
+        </section>
+
             <!-- Footer -->
 	        <%- include('partials/footer') %>
 	        <!-- /Fototer -->

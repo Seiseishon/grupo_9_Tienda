@@ -1,11 +1,12 @@
-<section class="productos-ofertas">
+ <main>
+     <section class="productos-ofertas">
 
 
-    <div class="crear-99"><a href="/products/create">Crear</a></div>
+     <div class="crear-99"><a href="/products/create">Crear</a></div>
     
 
 
-    <% products.forEach(product=>{ %>
+     <% products.forEach(product=>{ %>
 
         <a href="/products/productsDetail/<%=product.id%>">
             <article class="carta">
@@ -27,8 +28,8 @@
                                 <%=product.ver %>
                             </p>
                         </div>
-                        <img src="/images/<%=product.carrito %>" alt="" class="carro-ofertas">
-                    </div>
+                    </div>    
+                 <button class="carro-ofertas"><i class="fas fa-shopping-cart"></i></i></button>                   
                 </div>
             </article>
         </a>
@@ -47,4 +48,5 @@
         </div>
         <% }) %>
         
-</section>
+  </section>
+</main>
