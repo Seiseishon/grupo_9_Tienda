@@ -3,20 +3,20 @@
     padding: 0%;
     box-sizing:border-box ;
 }
-body{
+main{
     min-width: auto;
     background-color: #9452b3;
     font-family: 'Edu SA Beginner', cursive;
     font-family: 'Playfair Display', serif;
     font-family: 'Roboto', sans-serif;
 }
-header{
+/*header{
     position: relative;
     background-color: #c898db;
     padding:  20px ;
     top: 0;
     width: 100%;
-}
+}*/
 main{
     padding-top: 5px;
 }
@@ -32,7 +32,7 @@ a,img, button,input{
     display: block;
 }
 
-.ubi{
+/*.ubi{
     position: relative;
     top: 20px;
 }
@@ -53,7 +53,7 @@ h3{
     text-decoration: none;
     left: 10%;
     width: 80%;
-}
+}*/
 .imagen{
     display: block;
     width: 10%;
@@ -64,7 +64,7 @@ h3{
     .imagen:hover{
         transform: scale(1.20);
     }
-
+/*-----------main--------*/
 article{
     background-color: white;
     position: relative;
@@ -187,10 +187,12 @@ h1{
     .precio1,p{
         text-align: center;
     }
-.compra-final{
+     .compra-final{
     font-size: 15px;
+    }
 }
-}
+
+
 @media (min-width: 769px){
     .footer{
         width: 80%;
@@ -200,12 +202,12 @@ h1{
     img, button,input{
         display: block;
     }
-    .flecha,h3{
+    /*.flecha,h3{
         display: none;
     }
     .burger1{
         display: none;
-    }
+    }*/
     .personal{
         display: block;
         position: absolute;
@@ -213,7 +215,7 @@ h1{
         font-size: 50px;
         color: #9452b3;
     }
-    .logo{
+    /*.logo{
         width: 35%;
         text-align: center;
     }
@@ -271,8 +273,7 @@ h1{
             margin: auto;
             border-radius: 0 15px 15px 0;
             cursor: pointer;
-        }
-
+        }*/
 
 
 
@@ -283,7 +284,7 @@ h1{
             bottom: 140px;
             left: 20%;
         }
-        header{
+        /*header{
             height: 200px;
             padding: 50px 20px 20px 20px;
         }
@@ -294,7 +295,7 @@ h1{
         .ubicacion{
             top: -28px;
             left: 6.5%;
-        }
+        }*/
         main{
             display: flex;
             width: 95%

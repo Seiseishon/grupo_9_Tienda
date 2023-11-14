@@ -1,24 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+ 
+ <%- include('./partials/head')%>
 
-<head>
-    <%- include('./partials/head')%>
-    <link rel="stylesheet" href="/css/estilos.css">
-    <title>Open Market</title>
-</head>
+ <title>Open Market</title>
 
+ <body>
+     <%- include('./partials/header') %>
 
-<body>
-    <%- include('./partials/header') %>
         <div>
             <img class="banner" src="images/logoYbanner/Banner.gif" alt="banner">
         </div>
-        <h3 class="ofertas">OFERTAS MAS DESTACADAS</h3>
-        <%-include('./partials/forEach') %>
 
+        <h3 class="ofertas">OFERTAS MAS DESTACADAS</h3>
+
+     <%-include('./partials/forEach') %>
+
+     <h4>FORMAS DE PAGO</h4>
         <section class="xd">
-            <img src="images/icon.tarjetas.png" alt="">
-            <img src="images/envio a tod.png" alt="">
+            
+            <div class="tarjetas">
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-paypal"></i>
+            </div>
+
+         
+            <img src="/images/envio-a-tod.avif" alt="">
         </section>
 
-        <%-include('./partials/footer') %>
+     <%-include('./partials/footer') %>
+ </body>
+</html>

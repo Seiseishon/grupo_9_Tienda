@@ -6,5 +6,13 @@
   "password": "$2a$10$I6Yai.rNm1rEDUF5ZvjWiuup/4ASQIRA6gyMPjDwGnlr7i4pns7bq",
   "country": "argentina",
   "avatar": "foto-1696549147138.png"
+ },
+ {
+  "id": 2,
+  "nombre": "mar",
+  "email": "lovandy769@gmail.com",
+  "password": "$2a$10$TxHifyYYpkc/.XPcAfQ41ebJT7iO69QCIA8m6O8NpjtC6.gR39kSm",
+  "country": "arg",
+  "avatar": "foto-1699392350847.jpg"
  }
 ]

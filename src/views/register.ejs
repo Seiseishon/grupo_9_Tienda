@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -37,6 +38,25 @@
     </header>
     <main>
         <form action="/register" method="post" enctype="multipart/form-data" class="form-form">
+=======
+<html lang="es">
+ <head>
+    
+      <%-include('./partials/head')%>
+
+     <title>Registro</title>
+  
+     <link rel="stylesheet" href="/css/formulario.css">
+
+  </head>
+
+ <body>
+     <%-include('./partials/header')%>
+
+     <main>
+        <div class="contenedor-register">
+         <form action="/register" method="post" enctype="multipart/form-data" class="form-form">
+>>>>>>> 3d4488d27742c5fdd0d8771aaa1ec93f2e2b67c8
             
             <div class="nombre-usuario">
             <label for="nombre">Nombre y Apellido:</label>
@@ -66,8 +86,10 @@
             <button type="reset" class="boton">Limpiar Campos</button>
             </div>
           </form>
+          </div>
+      </main>
 
-    </main>
-    
-</body>
+     <%-include('./partials/footer')%>
+     
+ </body>
 </html>

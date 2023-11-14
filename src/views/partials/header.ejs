@@ -1,42 +1,44 @@
-<header>
-
+<header> 
   <div class="encabezado">
 
     <nav class="nav-inicio">
+     
+      <a class="logo" href="/">
+        <img src="/images/logoYbanner/logo-no-background.svg" class="logo" alt="Logo">
+      </a>
 
-        <a class="logo" href="/">
-         <img src="/images/logoYbanner/logo-no-background.svg" class="logo" alt="Logo">
-        </a>
+      <div class="buscador">
+        <form action="get">
+          <input type="text" placeholder="Buscar...">
+          <button><i class="fa-solid fa-magnifying-glass" id="boton"></i></button>
+        </form>
+      </div>
+      
+      <div class="burger-menu">
+      <button class="burger-menu">
+         <a href="/login"><i class="fa fa-bars burger" id="menu-hamburguesa"></i></a>
+      </button>
+     </div>
 
-        <div class="buscador">
-            <form action="get">
-                <input type="text" placeholder="Buscar..." />
-                <button><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
-        </div>
-
-        <div class="botns-nav">
-           <a href="/login"><i class="fas fa-user-circle"></i></a>
-           <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
-        </div>
+      <div class="botns-nav">
+        <a href="/login"><i class="fas fa-sign-in-alt"id="iconos"></i></a>
+        <a href="/carrito"><i class="fas fa-shopping-cart" id="iconos"></i></a>
+      </div>
 
     </nav>
 
-    <div class="Administrar-40"><a href="/products/listado">Administrar</a></div>
-
-    <div class="mobile">
-      <img class="cuenta" src="/images/burger menu (2).png" alt="">
-      <a href="/carrito"><img class="carrito-compra" src="/images/burger menu (3).png" alt="carrito"></a>
-      <button class="burger1"><i class="fas fa-bars burger"></i></button>
+    <div class="navegadores">
+      <ul>
+        <li><i class="fas fa-chevron-circle-down"></i>Categorias</li>
+        <li><i class="fas fa-user-tag"></i>Las mejores Ofertas</li>
+        <li><i class="fas fa-headphones"></i>Centro de Ayuda</li>
+      </ul>
     </div>
 
+    <div class="Administrar-40"><a href="/products/listado">Administrar</a></div>
+
+ 
+
   </div>
-
-
-
-  
-
-
-  
 
 </header>
