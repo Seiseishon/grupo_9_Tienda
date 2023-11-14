@@ -1,7 +1,7 @@
 const { json } = require('express');
 const fs = require ('fs');
 const path = require('path');
-
+const db = require('../database/models')
 const datos = ()=>{
    const rawDatos = fs.readFileSync(path.resolve(__dirname, '../datos/datos.json'), 'utf-8')
    
@@ -9,10 +9,10 @@ const datos = ()=>{
 }
 
 const controladorHome = (req,res)=>{
-    const products = datos();
-    res.render('home',{
-        products
-    })
+    db.Product.findAll()
+            .then(products => {
+                return res.render('home', {products:products})
+            })
 }
 
 const controladorCarrito = (req,res)=>{
