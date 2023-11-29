@@ -30,13 +30,7 @@ body{
 .caja-datos{
     width: 100%;
 }
-.titulo h2{
-    font-size: 1.5em;
-}
-.caja-datos{
-    width: 100%;
-   }
-   .caja-datos .datos{
+   .caja-datos .control{
        width: 100%;
        padding: 0.5em;
    }

@@ -1,354 +1,148 @@
+/*-----Aplicando css global-----*/
 *{
     margin: 0%;
     padding: 0%;
     box-sizing:border-box ;
+    font-family: sans-serif;
 }
-main{
+body{
     min-width: auto;
-    background-color: #9452b3;
-    font-family: 'Edu SA Beginner', cursive;
-    font-family: 'Playfair Display', serif;
-    font-family: 'Roboto', sans-serif;
+    background-color: #201247;
 }
-/*header{
-    position: relative;
-    background-color: #c898db;
-    padding:  20px ;
-    top: 0;
-    width: 100%;
-}*/
-main{
-    padding-top: 5px;
-}
-.footer{
-    padding-top: 5px;
-    width: 90%;
-    margin: auto;
-}
-a,img, button,input{
-    display: none;
-}
-.cantidad input{
-    display: block;
-}
+/*------Aplicando css al main-----*/
+.carrito {
 
-/*.ubi{
-    position: relative;
-    top: 20px;
-}
-.flecha{
-    position: relative;
-    top: 6px;
-}
-h3{
-    position: relative;
-    left: 10%;
-    bottom: 25px;
-    width: 70%;
-}
-.ubicacion{
-    position: relative;
     display: block;
-    color: black;
-    text-decoration: none;
-    left: 10%;
     width: 80%;
-}*/
-.imagen{
-    display: block;
-    width: 10%;
-    margin-left: 8%;
-    padding-top: 5%;
-    transition: .3s ease-in-out all;
-    }
-    .imagen:hover{
-        transform: scale(1.20);
-    }
-/*-----------main--------*/
-article{
-    background-color: white;
-    position: relative;
-    margin-left: 5%;
-    margin-right: 5%;
-    border-radius: 10px;
-    transition: .3s ease-in-out all;
-}
-
-article:hover {
-    transform: scale(1.02);
-    box-shadow: 1px 1px 15px rgba(255, 255, 255, 0.562);
-}
-
-.nombre{
-    width: 65%;
-    font-size: 13px;
-    margin: auto;
-}
-.imagen-nombre{
-    display: flex;
-}
-.boton-comprar{
-    display: flex;
-    justify-content: space-around;
-    width: 50%;
-    margin: auto;
-}
-.boton{
-    display: block;
-    background-color: white;
-    color: blue;
-    padding: 4px;
-    border: 0px;
-    }
-.comprar{
-    display: block;
-    color: blue;
-    background-color: white;
-    border: 0px;
-    padding: 4px;
-    }
-.precio-solo{
-    font-size: 13px;
-
-}
-.junto{
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    margin: 0 auto;
-    padding: 5px;
-}   
-.cantidad{
-    display: flex;
-    font-size: 13px;
-    align-items: center;
-}
-.cantidad input{
-    width: 20px;
-    border-radius: 5px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 2%;
+    margin:auto;
+    margin-top: 40px;
+    margin-bottom: 40px;;
     
 }
 
-.precio{
-    font-size: 13px;
-    margin: auto;
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
 }
-.precio1{
-    font-size: 13px;
-    margin: auto;
-}
-.precio1,p{
-    padding: 4px 0px;
-}
-.total{
+
+/* Estilos ael carrito y sección de productos */
+
+.producto{
     display: flex;
-    justify-content: space-between;
-    width: 90%;
-    margin: 0 auto;
+    flex-direction: column;
 }
 
-.compra-final{
-    display: block;
-    position: relative;
-    height: 38px;
-    width: 70%;
-    color: white;
-    background-color: #c898db;
-    border-radius: 10px;
-    left: 15%;
-    transition: .3s ease-in-out all;
-    }
-    .compra-final:hover{
-        transform: scale(1.09);
-    }
-.color-footer{
-    background-color: white;
-    border-radius: 10px;
+.carrito .productos {
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+.carrito .producto {
+    
+    align-items: center;
+    padding: 20px;
+}
+
+.carrito .producto img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.cantidad {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cantidad button {
+    background-color: #460F60;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.cantidad input[type="number"] {
+    width: 40px;
     padding: 5px;
-    transition: .3s ease-in-out all;
+    text-align: center;
 }
 
-.color-footer:hover {
-    transform: scale(1.02);
-    box-shadow: 1px 1px 15px rgba(255, 255, 255, 0.562);
-}
-.personal{
-    display: none;
-}
-h1{
-    display: none;
-}
-@media (min-width: 600px){
-    .precio1{
-        bottom: 120px;
-        left: 20%;
-        width: 50%;
-    }
-    .precio1,p{
-        text-align: center;
-    }
-     .compra-final{
-    font-size: 15px;
-    }
+/* Estilos para la sección de forma de pago */
+
+.forma-pago, .envio, .total {
+    padding: 20px;
 }
 
+.forma-pago label, .envio label {
+    margin-top: 10px;
+    display: block;
+}
 
+.forma-pago input[type="radio"] {
+    margin-right: 5px;
+}
+
+.forma-pago button {
+    background-color: #460F60;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.forma-pago button:hover {
+    background-color: #460F60;
+}
+
+/* Estilos para el botón "Calcular Total" */
+
+.total button {
+    background-color: #460F60;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.total button:hover {
+    background-color: #460F60;
+}
+
+@media(max-width:480px){
+    .carrito{
+        padding: 20px;
+        background-color: #fff;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+}
 @media (min-width: 769px){
-    .footer{
-        width: 80%;
-        margin: 0;
-        padding-top: 0;
-    }
-    img, button,input{
+    .carrito{
         display: block;
-    }
-    /*.flecha,h3{
-        display: none;
-    }
-    .burger1{
-        display: none;
-    }*/
-    .personal{
-        display: block;
-        position: absolute;
-        left: 90%;
-        font-size: 50px;
-        color: #9452b3;
-    }
-    /*.logo{
-        width: 35%;
-        text-align: center;
-    }
-    h1{
-        display: block;
-        font-weight: bold;
-        font-family: 'Caprasimo',cursive;
-        font-size: 25px;
-        color: black;
-        text-shadow: 1px 0px 0px white,
-                     0px 1px 0px white,
-                     -1px 0px 0px white,
-                     0px -1px 0px white;
-        transition: .3s ease-in-out all;
-    }
-    .logo:hover{
-        transform: scale(1.20);
-    }
-        li{
-            display: inline;
-        }
-        ul{
-            display: flex;
-            justify-content: space-around;
-        }
-        .buscador {
-            position: relative;
-            transition: .3s ease-in-out all;
-            width: 40%;
-            bottom: 50px;
-            left: 35%;
-        }
-        
-        .buscador input {
-            width: 100%;
-            padding: 10px;
-            padding-right: 20px;
-            border-radius: 15px 0 0 15px;
-            border: 0;
-            outline: none;
-        }
-        
-        .buscador:hover {
-            transform: scale(1.05);
-        }
-        
-        .buscador button {
-            background-color: white;
-            padding: 10px;
-            position: absolute;
-            border: 0;
-            top: 0;
-            bottom: 0;
-            left: 100%;
-            margin: auto;
-            border-radius: 0 15px 15px 0;
-            cursor: pointer;
-        }*/
-
-
-
-
-
-
-        .precio1{
-            bottom: 140px;
-            left: 20%;
-        }
-        /*header{
-            height: 200px;
-            padding: 50px 20px 20px 20px;
-        }
-        .ubi{
-            top: -5px;
-            left: 1.5%;
-        }
-        .ubicacion{
-            top: -28px;
-            left: 6.5%;
-        }*/
-        main{
-            display: flex;
-            width: 95%
-        }
-        article{
-            width: 150%;
-        }
-    .color-footer{
-        height: 100%;
-    }    
-}
-@media (min-width: 900px){
-    .nombre{
-        bottom: 150px;
-        font-size: 20px;
-    }
-    .boton{
-        top: 7px;
-        font-size: 20px;
-        padding: 10px;
-    }
-    .comprar{
-        font-size: 20px;
-        padding: 10px;
-    }
-    .precio1{
-        bottom: 170px;
-    }
-    .precio1,p{
-        padding: 10px 0;
-        font-size: 20px;
-    }
-    .precio-solo{
-        font-size: 20px;
-    }
-    .cantidad{
-        font-size: 20px;
-    }
-    .cantidad input{
-        width: 30px;
-        height: 30px;
+        width: 50%;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 2%;
+        margin:auto;
+        margin-top: 40px;
+        margin-bottom: 40px;;
     }
 }
 
-.personal{
-    transition: color 0.3s;
-  }
-  .personal:hover {
-    color: white;
-  }
-.compra-final{
-    transition: background-color 0.3s;
-}
-.compra-final:hover {
-    background-color: #7d10af;
-}

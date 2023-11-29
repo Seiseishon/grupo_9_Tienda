@@ -1,0 +1,191 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {   
+ min-width: auto;
+ font-family: 'Roboto', sans-serif;  
+}
+
+/*-----------HEADER------------*/
+
+
+header {
+    width: 100%;
+    background: rgb(99,47,133);
+    background: linear-gradient(90deg, rgba(99,47,133,1) 15%, rgba(70,105,147,0.9753151260504201) 50%, rgba(99,47,133,1) 86%);
+   }
+   
+   .encabezado {
+       width: 100%;
+      padding: 5px;
+   }
+   
+   .nav-inicio {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+   }
+   
+   .logo {
+    width: 55%;
+    padding: 2px;
+    cursor: pointer;
+   }
+   
+   .buscador {
+       width: 100%;
+       padding-left: 2px;
+       padding-right: 2px;
+       position: relative;
+       transition: .3s ease-in-out all;
+   }
+   
+   .buscador input {
+       width: 70%;
+       padding: 10px;
+       padding-right: 10px;   
+       border-radius: 15px 0 0 15px;
+       border: 0;
+       outline: none;
+   }
+   
+   .buscador:hover {
+       transform: scale(1.05);
+   }
+   
+   .buscador button{
+       background-color: rgb(238, 234, 240);
+       padding: 10px;
+       position: absolute;
+       border: 0;
+       top: 0;
+       bottom: 0;
+       margin: auto;
+       border-radius: 0 15px 15px 0;
+       cursor: pointer;
+   }
+   
+   .burger-menu  {
+    width: 40px;
+    display: flex;
+    justify-content: center;
+     border-radius: 10px;
+   }
+   .burger-menu   i {
+    background-color: #f2eaea;
+    border-radius: 10px;
+   }
+   #menu-hamburguesa {       
+     height: 30px;
+     padding: 5px;
+     width: 30px;
+     cursor: pointer;    
+   }
+   
+   .botns-nav {
+       display: none;
+       gap: 10px;
+       padding: 1% 0 1% 0;
+       font-size: 10px;
+       color: azure;
+        
+   }
+   
+   .botns-nav a:hover {
+       transform: scale(0.9);
+   }
+   
+   .navegadores {
+   display: none;
+   }
+   
+   .Administrar-40 {
+       display: none;
+   }
+   
+   .banner {
+       width: 100%;
+   }
+   
+   /*---------------tablets-------------*/
+
+@media (min-width: 480px){
+
+     .burger-menu  {
+         display: none;
+        }
+ 
+     .botns-nav {
+         display: flex;
+         gap: 16px;
+         padding: 1% 0 1% 0;
+            
+     }
+     
+     .botns-nav a{ 
+         font-size: 40px;
+         color: azure; 
+      }
+ 
+ 
+     .botns-nav a:hover {
+         transform: scale(0.9);
+     }
+     
+     .navegadores {
+      display: flex; 
+ 
+     }
+     .navegadores ul{
+         padding: 0;
+         list-style: none;
+       
+     }
+     .navegadores li {
+         display: inline-block;
+         margin-right: 30px;
+     }
+    }
+    /*----------------Compu------------*/
+
+@media (min-width: 768px)  {
+
+    .burger-menu  {
+        display: none;
+       }
+
+    .botns-nav {
+        display: flex;
+        gap: 16px;
+        padding: 1% 0 1% 0;
+           
+    }
+    
+    .botns-nav a{ 
+        font-size: 40px;
+        color: azure; 
+     }
+
+
+    .botns-nav a:hover {
+        transform: scale(0.9);
+    }
+    
+    .navegadores {
+     display: flex; 
+     margin-left: 80px;
+     font-size: 20px;
+    }
+    .navegadores ul{
+        padding: 4px;
+        list-style: none;
+    }
+    .navegadores li {
+        display: inline-block;
+        margin-right: 50px;
+     
+    }
+}

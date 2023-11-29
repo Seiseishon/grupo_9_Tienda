@@ -1,44 +1,4 @@
-<!DOCTYPE html>
-<<<<<<< HEAD
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/register.css">
-    <link rel="logo" type="images/OpenMarket logo_4.png" href="images/OpenMarket logo_4.png">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Edu+SA+Beginner&family=Playfair+Display:wght@500&family=Roboto&display=swap" rel="stylesheet">
-    <title>Formulario</title>
-</head>
-<body>
-    <header>
-        <div class="parte-superior">
-            <div class="esquina-iz">
-                <div class="items-menu">
-                <i class="fas fa-bars"></i>
-                </div>
-                <div class="items-carrito">
-                <i class="fas fa-shopping-cart"></i>
-                </div>
-            </div>
-            <div class="logo">
-            <h1>OPEN MARKET</h1>
-            </div>
-        </div>
-        <div class="buscador">
-            <form class="form" action="/register/user"  method="POST"> 
-                <input type="text" placeholder="Buscar..." />
-                <button><i  class="fa fa-search lupa"></i></button>
-            </form>
-        </div>
-        <div class="personal"><i class="fas fa-user-circle"></i></div>
-    </header>
-    <main>
-        <form action="/register" method="post" enctype="multipart/form-data" class="form-form">
-=======
+
 <html lang="es">
  <head>
     
@@ -46,7 +6,7 @@
 
      <title>Registro</title>
   
-     <link rel="stylesheet" href="/css/formulario.css">
+     <link rel="stylesheet" href="/css/register.css">
 
   </head>
 
@@ -54,15 +14,18 @@
      <%-include('./partials/header')%>
 
      <main>
-        <div class="contenedor-register">
+        
          <form action="/register" method="post" enctype="multipart/form-data" class="form-form">
->>>>>>> 3d4488d27742c5fdd0d8771aaa1ec93f2e2b67c8
-            
-            <div class="nombre-usuario">
-            <label for="nombre">Nombre y Apellido:</label>
+            <div class="contenedor-register">
+                <div class="titulo">
+                    <h2>Registrarme</h2>
+                </div>
+            <div class="caja-datos">
+            <label for="nombre">Nombre y Apellido:</label><br>
             <input type="text"name="nombre"  class="control">
-            
-            <label for="email">Email:</label>
+            </div>
+            <div class="caja-datos">
+            <label for="email">Email:</label><br>
             <input type="email"name="email" class="control">
             <% if(locals.errors && errors.email){ %>
                 <div class="text-danger" style="color: red;">
@@ -70,23 +33,25 @@
                 </div>
                 <% } %>
             </div>
-        
-            <label for="foto">Foto de Usuario:</label>
+            <div class="caja-datos">
+            <label for="foto">Foto de Usuario:</label><br>
             <input type="file" name="foto" class="control">
-        
-            <div class="Contraseña-confirmar">
-            <label for="contrasena">Contraseña:</label>
-            <input type="password"name="password"  class="control">
-        
-            <label for="confirmarContrasena">Pais:</label>
+            </div>
+            <div class="caja-datos">
+            <label for="contrasena">Contraseña:</label><br>
+            <input type="password"name="contrasena"class="control">
+        </div>
+        <div class="caja-datos">
+            <label for="country">Pais:</label><br>
             <input type="text"name="country" required class="control">
             </div>
-            <div class="enviar-campos">
-            <button type="submit" class="boton">Enviar</button>
-            <button type="reset" class="boton">Limpiar Campos</button>
+            <div class="botones">
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpiar Campos</button>
             </div>
+        </div>
           </form>
-          </div>
+          
       </main>
 
      <%-include('./partials/footer')%>

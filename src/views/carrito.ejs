@@ -1,54 +1,120 @@
 <!DOCTYPE html>
-<html lang="es">
- <head>
-      <%- include('partials/head') %>
-      <title>Mi Carrito</title>
-     <link rel="stylesheet" href="/css/carrito.css">
- </head>
- 
- <body>
-     <%- include('partials/header') %>
+<html lang="en">
+    <link rel="stylesheet" href="/css/carrito.css">
+<!-- Head -->
+<%- include('partials/head') %>
+<!-- /Head -->
 
-     <main>
-     
-      <article>
-          <div class="imagen-nombre">
-          <img class="imagen" src="/images/auriculares.jpeg" alt="">
-          <p class="nombre">Auriculares inalámbricos JBL Tune 510BT JBLT510BT</p>
-          </div>
-          <div class="boton-comprar">
-          <button class="boton" type="reset">Eliminar</button>
-          <button class="comprar" type="submit">Guardar</button>
-          </div>
-         <div class="junto">
-            <form class="cantidad">
-               <label for="quantity">Unidad:</label>
-               <input type="number" id="quantity" name="quantity" min="1" max="5">
+    <body>
+        <!-- Header -->
+        <%- include('partials/header') %>
+        <!-- /Header -->
+        
+    <div class="carrito">
+        <h2>Carrito de Compras</h2>
+        <div class="productos">
+            <div class="producto">
+                <img src="imagen_producto1.jpg" alt="Producto 1">
+                <h3>(Nombre producto)</h3>
+                <p>Precio: ($$)</p>
+                <div class="cantidad">
+                    <button onclick="restarCantidad('cantidad_producto1')">-</button>
+                    <input type="number" id="cantidad_producto1" value="1">
+                    <button onclick="sumarCantidad('cantidad_producto1')">+</button>
+                </div>
+                <div>
+                <label for="producto1">Agregar al carrito</label>
+                <input type="checkbox" id="producto1">
+                </div>
+            </div>
+            <!-- Agregar más productos aquí -->
+        </div>
+        <div class="forma-pago">
+            <h3>Forma de Pago</h3>
+            <form>
+                <input type="radio" id="deposito" name="forma_pago" value="deposito">
+                <label for="deposito">Depósito o Transferencia Bancaria</label><br>
+
+                <input type="radio" id="mercadopago" name="forma_pago" value="mercadopago">
+                <label for="mercadopago">MercadoPago - Tarjetas online, PagoFacil, RapiPago</label><br>
+
+                <input type="radio" id="tarjeta" name="forma_pago" value="tarjeta">
+                <label for="tarjeta">Tarjetas Visa o Mastercard</label><br>
             </form>
-            <p class="precio-solo">$ARS 34,499.00</p>
         </div>
-     </article>
-     
-     <div class="footer">
-        <div class="color-footer">
+        <div class="envio">
+            <h3>Envío</h3>
+            <form>
+                <label for="codigo_postal">Introduce tu Código Postal:</label>
+                <input type="text" id="codigo_postal" placeholder="Ingresa tu código postal">
+                <button type="button" onclick="calcularEnvio()">Calcular Envío</button>
+                <p id="costo_envio">Costo de Envío: $0</p>
+            </form>
+        </div>
         <div class="total">
-            <div class="precio">
-                <p>Producto</p>
-                <p>Envio</p>
-                <p>Total</p>
-            </div>
-            <div class="precio1">
-                <p>$ARS 34,499.00</p>
-                <p>$0</p>
-                <p>$ARS 34,499.00</p>
-            </div>
-        </div>    
-        <button class="compra-final" type="submit">Continuar compra</button>
+            <h3>Total: $0</h3>
+            <button onclick="calcularTotal()">Calcular Total</button>
         </div>
-      </div>
-     </main>
+    </div>
 
-     <%- include('partials/footer') %>
- </body>
+    <script>
+        function restarCantidad(inputId) {
+            const inputCantidad = document.getElementById(inputId);
+            let cantidad = parseInt(inputCantidad.value);
+            if (cantidad > 1) {
+                cantidad--;
+                inputCantidad.value = cantidad;
+            }
+        }
+
+        function sumarCantidad(inputId) {
+            const inputCantidad = document.getElementById(inputId);
+            let cantidad = parseInt(inputCantidad.value);
+            cantidad++;
+            inputCantidad.value = cantidad;
+        }
+
+        function calcularEnvio() {
+            const codigoPostalInput = document.getElementById('codigo_postal');
+            const codigoPostal = codigoPostalInput.value;
+            // Aquí puedes implementar la lógica para calcular el costo de envío según el código postal ingresado
+            // Por ejemplo, puedes hacer una llamada a una API de servicios de envío
+
+            // En este ejemplo, simplemente establecemos un costo fijo de envío de $10
+            const costoEnvio = 10;
+
+            const costoEnvioElement = document.getElementById('costo_envio');
+            costoEnvioElement.innerText = `Costo de Envío: $${costoEnvio}`;
+        }
+
+        function calcularTotal() {
+            
+
+            // Ejemplo: calcular el total de productos seleccionados
+            const productos = document.querySelectorAll('input[type="checkbox"]');
+            let total = 0;
+
+            productos.forEach(producto => {
+                if (producto.checked) {
+                    const precio = parseInt(producto.parentNode.querySelector('p').innerText.split('$')[1]);
+                    const cantidad = parseInt(producto.parentNode.querySelector('input[type="number"]').value);
+                    total += precio * cantidad;
+                }
+            });
+
+            // Agregar el costo de envío al total
+            const costoEnvioElement = document.getElementById('costo_envio');
+            const costoEnvio = parseInt(costoEnvioElement.innerText.split('$')[1]);
+            total += costoEnvio;
+
+            // Actualizar el elemento con el total calculado
+            const totalElement = document.querySelector('.total h3');
+            totalElement.innerText = `Total: $${total}`;
+        }
+    </script>
+ <!-- Footer -->
+ <%- include('partials/footer') %>
+ <!-- /Fototer -->
+</body>
 
 </html>
